@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,24 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="w-screen h-screen ">
+          {/* IMAGEN DE FONDO */}
+          <div className="absolute inset-0 -z-10">
+            <Image 
+            src="/paisaje.jpg" 
+            alt="" 
+            fill 
+            priority 
+            className="object-cover opacity-70"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-300/70 to-blue-200/70 mix-blend-overlay"></div>
+          </div>
+
+          <div className="relative z-10 h-full">
+              <div className="h-24 bg-white"><Navbar/></div>
+              <div className="h-[calc(100vh-6rem)]">{children}</div>
+          </div>
+        </div>
       </body>
     </html>
   );
