@@ -33,7 +33,7 @@ export default function RootLayout({
           {/* IMAGEN DE FONDO */}
           <div className="absolute inset-0 -z-10">
             <Image 
-            src="/paisaje.jpg" 
+            src="https://res.cloudinary.com/dosbg5xdd/image/upload/v1741316520/paisaje_h3eusy.jpg" 
             alt="" 
             fill 
             priority 
