@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Image from "next/image";
+import TransitionProvider from "@/components/transitionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,24 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="w-screen h-screen ">
-          {/* IMAGEN DE FONDO */}
-          <div className="absolute inset-0 -z-10">
-            <Image 
-            src="https://res.cloudinary.com/dosbg5xdd/image/upload/v1741316520/paisaje_h3eusy.jpg" 
-            alt="" 
-            fill 
-            priority 
-            className="object-cover opacity-70"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-gray-300/70 to-blue-200/70 mix-blend-overlay"></div>
-          </div>
-
-          <div className="relative z-10 h-full">
-              <div className="h-24 bg-white"><Navbar/></div>
-              <div className="h-[calc(100vh-6rem)]">{children}</div>
-          </div>
-        </div>
+        <TransitionProvider>{children}</TransitionProvider>
       </body>
     </html>
   );
