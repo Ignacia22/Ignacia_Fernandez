@@ -1,6 +1,6 @@
 "use client"
 
-import navConfig from "@/config/navConfig";
+import navConfig, { LinksType } from "@/config/navConfig";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
         <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
             {/* LINKS */}
             <div className="hidden md:flex gap-4 w-1/3">
-                {navConfig.links.map(link => (
+                {navConfig.links.map((link: LinksType) => (
                     <NavLink link={link} key={link.title}/>
                 ))}
             </div>
