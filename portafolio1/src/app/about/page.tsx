@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import Cartoon from "@/components/cartoon";
@@ -9,7 +8,11 @@ import { useRef } from "react";
 const AboutPage = () => {
 
     const skillRef = useRef<HTMLDivElement | null>(null)
-    const isSkillRefInView = useInView(skillRef)
+    //const isSkillRefInView = useInView(skillRef, {once: true})
+    const isSkillRefInView = useInView(skillRef, {margin:"-100px"})
+
+    const experienceRef = useRef<HTMLDivElement | null>(null)
+    const isExperienceRefInView = useInView(experienceRef, {margin:"-100px"})
 
     return (
         <motion.div 
@@ -25,7 +28,7 @@ const AboutPage = () => {
                 {/* Bio CONTAINER */}
                 <div className="flex flex-col gap-12 justify-center">
                     {/* TITLE */}
-                    <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+                    <h1 className="font-bold text-3xl">BIOGRAPHY</h1>
                     {/* DESCRIPTION */}
                     <p className="text-lg">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quae dicta aliquam vel ipsa enim cupiditate optio, ut earum ullam expedita sapiente error fuga consequatur odit hic voluptatibus minus aspernatur.
@@ -35,10 +38,33 @@ const AboutPage = () => {
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     </span>
                     <div className="">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="2" width="20" height="20" stroke="#000000" strokeWidth="1" fill="none" rx="2"/>
-                    <path d="M12 6L12 15M12 15L10 13M12 15L14 13" stroke="#000000" strokeWidth="1" strokeLinecap="round"/>
-                    </svg>
+                    <motion.svg 
+                    initial={{opacity: 0.2, y: 0}}
+                    animate={{opacity: 1, y: "10px"}}
+                    transition={{repeat: Infinity, duration: 3, ease: "easeInOut"}}
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <rect 
+                    x="2" 
+                    y="2" 
+                    width="20" 
+                    height="20" 
+                    stroke="#000000" 
+                    strokeWidth="1" 
+                    fill="none" 
+                    rx="2"
+                    />
+                    <path 
+                    d="M12 6L12 15M12 15L10 13M12 15L14 13" 
+                    stroke="#000000" 
+                    strokeWidth="1" 
+                    strokeLinecap="round"
+                    />
+                    </motion.svg>
 
                     </div>
                 </div>
@@ -46,39 +72,82 @@ const AboutPage = () => {
                 {/* SKILLS CONTAINER*/}
                 <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
                     {/*SKILL TITLE */}
-                    <motion.h1 initial={{x:"-300px"}} animate={isSkillRefInView ? {x:0} : {}} transition={{delay: 0.2}} className="font-bold text-2xl">SKILLS</motion.h1>
+                    <motion.h1 
+                    initial={{x:"-300px"}} 
+                    animate={isSkillRefInView ? {x:0} : {}} 
+                    transition={{delay: 0.2}} 
+                    className="font-bold text-3xl"
+                    >SKILLS
+                    </motion.h1>
                     {/* SKILL LIST */}
-                    <div className="flex gap-4 flex-wrap">
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">Javascript</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">TypeScript</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">Next.js</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">React.js</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">HTML</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">Node.js</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">PostgresSQL</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">MongoDB Atlas</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">Tailwind</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">Bootstrap</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">Wordpress</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">Elementor</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-slate-400 hover:text-black">Figma</div>
-                    </div>
+                    <motion.div 
+                    initial={{x:"-300px"}} 
+                    animate={isSkillRefInView ? {x:0} : {}} 
+                    className="flex gap-4 flex-wrap"
+                    >
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Javascript</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">TypeScript</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Next.js</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">React.js</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">HTML</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Node.js</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">PostgresSQL</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">MongoDB</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Tailwind</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Bootstrap</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Wordpress</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Elementor</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Figma</div>
+                    </motion.div>
 
                     {/* SKILL SCROLL SVG */}
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="2" width="20" height="20" stroke="#000000" strokeWidth="1" fill="none" rx="2"/>
-                    <path d="M12 6L12 15M12 15L10 13M12 15L14 13" stroke="#000000" strokeWidth="1" strokeLinecap="round"/>
-                    </svg>
+                    <motion.svg 
+                    initial={{opacity: 0.2, y: 0}}
+                    animate={{opacity: 1, y: "10px"}}
+                    transition={{repeat: Infinity, duration: 3, ease: "easeInOut"}}
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <rect 
+                    x="2" 
+                    y="2" 
+                    width="20" 
+                    height="20" 
+                    stroke="#000000" 
+                    strokeWidth="1" 
+                    fill="none" 
+                    rx="2"
+                    />
+                    <path 
+                    d="M12 6L12 15M12 15L10 13M12 15L14 13" 
+                    stroke="#000000" 
+                    strokeWidth="1" 
+                    strokeLinecap="round"
+                    />
+                    </motion.svg>
 
                     </div>
 
 
                 {/* EXPERIENCE CONTAINER */}
-                <div className="flex flex-col gap-12 justify-center pb-48">
+                <div className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
                     {/*EXPERIENCE TITLE */}
-                    <h1 className="font-bold text-2xl">STUDIES</h1>
+                    <motion.h1 
+                    initial={{x:"-300px"}} 
+                    animate={isExperienceRefInView ? {x:"0"} : {}} 
+                    transition={{delay:0.2}} 
+                    className="font-bold text-3xl"
+                    >STUDIES
+                    </motion.h1>
                     {/* EXPERIENCE LIST */}
-                    <div className="">
+                    <motion.div 
+                    initial={{x:"-300px"}} 
+                    animate={isExperienceRefInView ? {x:"0"} : {}} 
+                    className=""
+                    >
                         {/* EXPERIENCE LIST ITEM */}
                         <div className="flex justify-between h-48">
                             {/* LEFT */}
@@ -138,7 +207,7 @@ const AboutPage = () => {
                             </div>
                         </div>
 
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             {/* IMAGE CONTAINER */}
