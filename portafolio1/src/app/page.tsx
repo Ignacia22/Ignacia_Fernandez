@@ -15,7 +15,7 @@ export default function HomePage() {
        src="https://res.cloudinary.com/dosbg5xdd/image/upload/v1741316660/anime_zflcrc.png" 
        alt="portada"
        fill 
-       className="object-contain"
+       className="object-cover"
        />
     </div>
     {/* TEXT CONTAINER */}
