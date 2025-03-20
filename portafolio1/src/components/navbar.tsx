@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
                 href="/" 
                 className="text-sm bg-blue-950 rounded-md p-1 font-semibold flex items-center justify-center">
                 <span className="text-white mr-1">Igna</span>
-                <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center font-bold">.DEV</span>
+                <span className="w-16 h-8 rounded bg-white text-black flex items-center justify-center font-bold">.DESIGN</span>
                 </Link>
             </div>
             {/* SOCIAL */}
