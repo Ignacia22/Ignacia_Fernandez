@@ -12,7 +12,7 @@ const PortafolioPage = () => {
 
     const {scrollYProgress} = useScroll({target: ref})
 
-    const x = useTransform(scrollYProgress, [0,1], ["0%", "-70%"])
+    const x = useTransform(scrollYProgress, [0,1], ["0%", "-75%"])
 
     return (
         <motion.div 
@@ -43,7 +43,7 @@ const PortafolioPage = () => {
                      {/* Resto del contenido */}
                      <div className="flex flex-col gap-8 text-white">
                        <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">{Site.title}</h1>
-                       <div className="relative w-80 h-64 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
+                       <div className="relative w-70 h-56 md:h-60 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[330px]">
                          <Image
                            src={Site.img}
                            alt=""
@@ -56,7 +56,7 @@ const PortafolioPage = () => {
                        href={Site.link}
                        className="flex justify-end"
                        >
-                        <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                        <button className="p-2 text-sm md:p-4 md:text-md lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
                           See demo
                         </button>
                         </Link>
@@ -83,7 +83,7 @@ const PortafolioPage = () => {
                   <Link 
                   href="/contact" 
                   className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
-                  >SIGUEME
+                  >CONTACTAME
                   </Link>
                 </div>
                </div>
