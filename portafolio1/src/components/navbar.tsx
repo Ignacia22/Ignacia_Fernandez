@@ -1,6 +1,6 @@
 "use client"
 
-import navConfig from "@/config/navConfig";
+import navConfig, { LinksType } from "@/config/navConfig";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
         <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
             {/* LINKS */}
             <div className="hidden md:flex gap-4 w-1/3">
-                {navConfig.links.map(link => (
+                {navConfig.links.map((link: LinksType) => (
                     <NavLink link={link} key={link.title}/>
                 ))}
             </div>
@@ -26,9 +26,9 @@ const Navbar: React.FC = () => {
             <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
                 <Link 
                 href="/" 
-                className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center">
+                className="text-sm bg-blue-950 rounded-md p-1 font-semibold flex items-center justify-center">
                 <span className="text-white mr-1">Igna</span>
-                <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">.dev</span>
+                <span className="w-16 h-8 rounded bg-white text-black flex items-center justify-center font-bold">.DESIGN</span>
                 </Link>
             </div>
             {/* SOCIAL */}
