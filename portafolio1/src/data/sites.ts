@@ -20,10 +20,10 @@ export const Sites: Sites2[] = [
     {
         id: 2,
         color: "bg-gradient-to-r from-red-300 to-blue-300",
-        title: "Hola",
+        title: "Eccomers de Tecnologia",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima esse fuga, sequi atque animi culpa eveniet delectus repellat possimus a est nostrum ipsam dicta voluptatibus consequuntur explicabo earum repellendus.",
-        img: "https://res.cloudinary.com/dosbg5xdd/image/upload/v1741885481/Rectangle_10_yc2r19.jpg",
-        link: "https://example.com",
+        img: "https://res.cloudinary.com/dosbg5xdd/image/upload/v1742933302/imagen_2025-03-25_170817931_pzjhzr.png",
+        link: "https://e-commers-tecno.vercel.app",
     },
     {
         id: 3,
