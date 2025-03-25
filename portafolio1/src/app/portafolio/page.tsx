@@ -23,7 +23,7 @@ const PortafolioPage = () => {
         >
             <div className="h-[600vh] relative" ref={ref}>
                 <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center text-blue-950">
-                    My Works
+                    Mis Trabajos
                 </div>
                 <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
                   <motion.div style={{x}} className="flex">
@@ -57,7 +57,7 @@ const PortafolioPage = () => {
                        className="flex justify-end"
                        >
                         <button className="p-2 text-sm md:p-4 md:text-md lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                          See demo
+                          Ver demo
                         </button>
                         </Link>
                      </div>
