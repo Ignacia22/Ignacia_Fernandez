@@ -21,15 +21,15 @@ export default function HomePage() {
     {/* TEXT CONTAINER */}
     <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center text-blue-950">
     {/* TITLE */}
-       <h1 className="text-4xl md:text-6xl font-bold">Vive la experiencia digital. Diseña conmigo</h1>
+       <h1 className="text-3xl md:text-5xl font-bold">Vive la experiencia digital. Diseña conmigo</h1>
        {/* DESC */}
-       <p className="md:text-xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quod inventore vero quo ea cum et, in harum magnam, saepe fugit ipsam eveniet odit nihil beatae est at aperiam minima.
+       <p className="md:text-lg">
+       Creo sitios web que combinan estética y funcionalidad para destacar tu marca en el mundo digital. Como diseñadora y desarrolladora frontend, te ofrezco soluciones personalizadas que no solo capturan la atención visual sino que también proporcionan una experiencia fluida al usuario. Hagamos realidad tu proyecto y llevemos juntos tu presencia web al siguiente nivel.
        </p>
        {/* BUTTONS */}
        <div className="w-full flex gap-4">
-        <button className="p-4 rounded-lg ring-1 ring-black bg-blue-950 text-white">Ve mis trabajos</button>
-        <button className="p-4 rounded-lg ring-1 ring-blue-950">Contact me</button>
+        <button className="p-4 rounded-lg ring-1 ring-black bg-blue-950 text-white hover:bg-white hover:text-blue-950">Ve mis trabajos</button>
+        <button className="p-4 rounded-lg ring-1 ring-blue-950 hover:bg-white">Contactame</button>
        </div>
     </div>
     </div>

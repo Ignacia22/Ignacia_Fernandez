@@ -28,14 +28,14 @@ const AboutPage = () => {
                 {/* Bio CONTAINER */}
                 <div className="flex flex-col gap-12 justify-center">
                     {/* TITLE */}
-                    <h1 className="font-bold text-3xl">BIOGRAPHY</h1>
+                    <h1 className="font-bold text-3xl">BIOGRAFIA</h1>
                     {/* DESCRIPTION */}
                     <p className="text-lg">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quae dicta aliquam vel ipsa enim cupiditate optio, ut earum ullam expedita sapiente error fuga consequatur odit hic voluptatibus minus aspernatur.
+                       Soy una desarrolladora Frontend Junior y diseñadora web que transforma ideas en experiencias digitales         cautivadoras. Mi enfoque combina código limpio con principios de diseño centrado en el usuario, creando interfaces         que no solo se ven increíbles sino que también funcionan de manera intuitiva. A través de mi trabajo, busco el         equilibrio perfecto entre estética y funcionalidad, utilizando las últimas tecnologías web para dar vida a         proyectos únicos que destacan en el mundo digital.
                     </p>
                     {/* QUOTE */}
                     <span className="italic">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Transformando visiones en experiencias web memorables, una línea de código a la vez.
                     </span>
                     <div className="">
                     <motion.svg 
@@ -140,7 +140,7 @@ const AboutPage = () => {
                     animate={isExperienceRefInView ? {x:"0"} : {}} 
                     transition={{delay:0.2}} 
                     className="font-bold text-3xl"
-                    >STUDIES
+                    >STUDIOS
                     </motion.h1>
                     {/* EXPERIENCE LIST */}
                     <motion.div 
@@ -154,14 +154,14 @@ const AboutPage = () => {
                             <div className="w-1/3 ">
                                 {/* TITLE */}
                                 <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                                    Advanced Technician in Web Design
+                                    Tecnico en Nivel Superior en Diseño Web
                                 </div>
                                 {/* DESCRIPTION */}
-                                <div className="p-3 text-sm italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                                <div className="p-3 text-sm italic">Especialización en diseño UX/UI y desarrollo de interfaces web atractivas y funcionales orientadas al usuario.</div>
                                 {/* DATE */}
                                 <div className="p-3 text-red-500 text-sm font-semibold">mar. 2020 - jun. 2022</div>
                                 {/* INSTITUTION */}
-                                <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Henry Bootcamp</div>
+                                <div className="p-1 rounded bg-white text-sm font-semibold w-fit">INACAP (Centro de Formación Tecnica de Chile)</div>
                             </div>
                             {/* CENTER */}
                             <div className="w-1/6">
@@ -196,10 +196,10 @@ const AboutPage = () => {
                             <div className="w-1/3 ">
                               {/* TITLE */}
                               <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                                    Junior Frontend Developer
+                                    Desarrolladora Frontend Junior
                                 </div>
                                 {/* DESCRIPTION */}
-                                <div className="p-3 text-sm italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+                                <div className="p-3 text-sm italic">Formación intensiva en React JS, Next JS, JavaScript y desarrollo de sitios web interactivas y responsivas.</div>
                                 {/* DATE */}
                                 <div className="p-3 text-red-500 text-sm font-semibold">oct. 2024 - feb. 2025</div>
                                 {/* INSTITUTION */}

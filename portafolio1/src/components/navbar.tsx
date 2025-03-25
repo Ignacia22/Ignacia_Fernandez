@@ -33,10 +33,10 @@ const Navbar: React.FC = () => {
             </div>
             {/* SOCIAL */}
             <div className="hidden md:flex gap-4 w-1/3">
-                <Link href="#">
+                <Link href="https://github.com/Ignacia22">
                   <Image src="/github.png" alt="" width={24} height={24}/>
                 </Link>
-                <Link href="#">
+                <Link href="https://www.linkedin.com/in/maria-ignacia-fernández-a65a90252/">
                   <Image src="/linkedin.png" alt="" width={24} height={24}/>
                 </Link>
             </div>
