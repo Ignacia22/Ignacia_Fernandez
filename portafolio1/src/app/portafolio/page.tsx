@@ -42,7 +42,7 @@ const PortafolioPage = () => {
                    >
                      {/* Resto del contenido */}
                      <div className="flex flex-col gap-8 text-white">
-                       <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">{Site.title}</h1>
+                       <h1 className="text-lg font-bold md:text-2xl lg:text-5xl xl:text-6xl">{Site.title}</h1>
                        <div className="relative w-70 h-56 md:h-60 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[330px]">
                          <Image
                            src={Site.img}
