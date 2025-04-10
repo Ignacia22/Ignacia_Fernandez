@@ -31,6 +31,6 @@ export const Sites: Sites2[] = [
         title: "WOO Hospital - ReactJS(Vite)",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima esse fuga, sequi atque animi culpa eveniet delectus repellat possimus a est nostrum ipsam dicta voluptatibus consequuntur explicabo earum repellendus.",
         img: "https://res.cloudinary.com/dosbg5xdd/image/upload/v1743034896/Captura_de_pantalla_2025-03-26_191925_jdgiux.png",
-        link: "https://hospital-front-livid.vercel.app/login",
+        link: "https://hospital-front-livid.vercel.app",
     },
 ] 
