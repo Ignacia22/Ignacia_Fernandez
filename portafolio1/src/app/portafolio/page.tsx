@@ -12,7 +12,7 @@ const PortafolioPage = () => {
 
     const {scrollYProgress} = useScroll({target: ref})
 
-    const x = useTransform(scrollYProgress, [0,1], ["0%", "-75%"])
+    const x = useTransform(scrollYProgress, [0,1], ["0%", "-80%"])
 
     return (
         <motion.div 
@@ -34,6 +34,7 @@ const PortafolioPage = () => {
                  if (Site.id === 1) gradientClass = "bg-gradient-to-r from-red-300 to-blue-300";
                  else if (Site.id === 2) gradientClass = "bg-gradient-to-r from-blue-300 to-violet-300";
                  else if (Site.id === 3) gradientClass = "bg-gradient-to-r from-violet-300 to-purple-300";
+                 else if (Site.id === 4) gradientClass = "bg-gradient-to-r from-purple-300 to-pink-300";
   
                  return (
                    <div 
@@ -42,7 +43,7 @@ const PortafolioPage = () => {
                    >
                      {/* Resto del contenido */}
                      <div className="flex flex-col gap-8 text-white">
-                       <h1 className="text-lg font-bold md:text-2xl lg:text-5xl xl:text-6xl">{Site.title}</h1>
+                       <h1 className="text-lg font-bold md:text-2xl lg:text-5xl xl:text-[2.75rem]">{Site.title}</h1>
                        <div className="relative w-70 h-56 md:h-60 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[330px]">
                          <Image
                            src={Site.img}
@@ -51,7 +52,7 @@ const PortafolioPage = () => {
                            className="object-cover"
                          />
                        </div>
-                       <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">{Site.desc}</p>
+                       <p className="w-80 md:w-96 lg:w-[500px] lg:text-[1rem] xl:w-[600px]">{Site.desc}</p>
                        <Link 
                        href={Site.link}
                        className="flex justify-end"
