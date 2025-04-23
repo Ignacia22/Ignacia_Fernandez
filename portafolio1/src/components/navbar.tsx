@@ -39,6 +39,9 @@ const Navbar: React.FC = () => {
                 <Link href="https://www.linkedin.com/in/maria-ignacia-fernández-a65a90252/">
                   <Image src="/linkedin.png" alt="" width={24} height={24}/>
                 </Link>
+                <Link href="https://drive.google.com/drive/folders/1xx6Di_gO309uV6X8Eg_p0wTWQssp4hEn?usp=drive_link">
+                  <Image src="/cv.png" alt="" width={24} height={24}/>
+                </Link>
             </div>
             {/* RESPONSIVE MENU */}
             <div className="md:hidden">
