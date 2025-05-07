@@ -2,9 +2,9 @@
 
 import { Sites } from "@/data/sites";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import Slider from "react-slick";
 
 const PortafolioPage = () => {
 
@@ -13,6 +13,16 @@ const PortafolioPage = () => {
     const {scrollYProgress} = useScroll({target: ref})
 
     const x = useTransform(scrollYProgress, [0,1], ["0%", "-80%"])
+
+
+     // Configuración de Slick
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
     return (
         <motion.div 
@@ -35,6 +45,7 @@ const PortafolioPage = () => {
                  else if (Site.id === 2) gradientClass = "bg-gradient-to-r from-blue-300 to-violet-300";
                  else if (Site.id === 3) gradientClass = "bg-gradient-to-r from-violet-300 to-purple-300";
                  else if (Site.id === 4) gradientClass = "bg-gradient-to-r from-purple-300 to-pink-300";
+                 else if (Site.id === 5) gradientClass = "bg-gradient-to-r from-pink-300 to-rose-300";
   
                  return (
                    <div 
@@ -45,12 +56,18 @@ const PortafolioPage = () => {
                      <div className="flex flex-col gap-8 text-white">
                        <h1 className="text-lg font-bold md:text-2xl lg:text-5xl xl:text-[2.75rem]">{Site.title}</h1>
                        <div className="relative w-70 h-56 md:h-60 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[330px]">
-                         <Image
-                           src={Site.img}
-                           alt=""
-                           fill
-                           className="object-cover"
-                         />
+                       <Slider {...settings}>
+                        {Site.carouselImages.map((image, index) => (
+                          <div key={index}>
+                            <motion.img
+                              src={image}
+                              alt={`Carrusel Imagen ${index + 1}`}
+                              className="object-cover w-full h-full"
+                              whileHover={{ scale: 1.05 }} // Ejemplo de animación
+                            />
+                          </div>
+                        ))}
+                      </Slider>
                        </div>
                        <p className="w-80 md:w-96 lg:w-[500px] lg:text-[1rem] xl:w-[600px]">{Site.desc}</p>
                        <Link 
