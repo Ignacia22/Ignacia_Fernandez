@@ -71,8 +71,8 @@ export const Sites: Sites2[] = [
         link: "https://121expreso.com.ar",
         carouselImages: [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746658693/121expreso-imagenSitio_to4ctk.png", 
-            "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746658817/Captura_de_pantalla_2025-05-07_185915_srs0hb.png", 
-            "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746658814/Captura_de_pantalla_2025-05-07_185954_qorq3j.png"
+            "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746662915/Captura_de_pantalla_2025-05-07_200750_qasb7z.png", 
+            "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746658817/Captura_de_pantalla_2025-05-07_185915_srs0hb.png"
         ]
     }
 ] 
