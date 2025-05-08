@@ -12,7 +12,7 @@ const PortafolioPage = () => {
 
     const {scrollYProgress} = useScroll({target: ref})
 
-    const x = useTransform(scrollYProgress, [0,1], ["0%", "-80%"])
+    const x = useTransform(scrollYProgress, [0,1], ["0%", "-82%"])
 
 
      // Configuración de Slick
