@@ -43,11 +43,13 @@ export const Sites: Sites2[] = [
         desc: "Aplicación full stack desarrollada con React y Vite en el frontend, y Express con TypeScript en el backend. Incluye rutas dinámicas con React Router, formularios controlados con Formik, peticiones a APIs usando Axios y alertas interactivas con SweetAlert2. En el servidor, se utilizó Express junto a TypeORM para la gestión de base de datos PostgreSQL, con manejo de fechas usando Moment y configuración de entorno con dotenv.",
         img: "https://res.cloudinary.com/dosbg5xdd/image/upload/v1743034896/Captura_de_pantalla_2025-03-26_191925_jdgiux.png",
         link: "https://hospital-front-livid.vercel.app",
+
         carouselImages: [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1743034896/Captura_de_pantalla_2025-03-26_191925_jdgiux.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1747344376/Captura_de_pantalla_2025-05-15_172514_evhjuy.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1747344376/Captura_de_pantalla_2025-05-15_172545_sn1eyr.png"
         ]
+
     },
     {
         id: 4,
