@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HomePage() {
-
 
   return (
     <motion.div className="h-full" initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration: 1}}>
@@ -28,8 +28,17 @@ export default function HomePage() {
        </p>
        {/* BUTTONS */}
        <div className="w-full flex gap-4">
-        <button className="p-4 rounded-lg ring-1 ring-black bg-blue-950 text-white hover:bg-white hover:text-blue-950">Ve mis trabajos</button>
-        <button className="p-4 rounded-lg ring-1 ring-blue-950 hover:bg-white">Contactame</button>
+        <Link href="/portafolio">
+          <button className="p-4 rounded-lg ring-1 ring-black bg-blue-950 text-white hover:bg-white hover:text-blue-950">
+            Ve mis trabajos
+          </button>
+        </Link>
+
+        <Link href="/contact">
+        <button 
+        className="p-4 rounded-lg ring-1 ring-blue-950 hover:bg-white"
+        >Contactame</button>
+        </Link>
        </div>
     </div>
     </div>
