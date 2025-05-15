@@ -45,8 +45,8 @@ export const Sites: Sites2[] = [
         link: "https://hospital-front-livid.vercel.app",
         carouselImages: [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1743034896/Captura_de_pantalla_2025-03-26_191925_jdgiux.png", 
-            "", 
-            ""
+            "https://res.cloudinary.com/dosbg5xdd/image/upload/v1747344376/Captura_de_pantalla_2025-05-15_172514_evhjuy.png", 
+            "https://res.cloudinary.com/dosbg5xdd/image/upload/v1747344376/Captura_de_pantalla_2025-05-15_172545_sn1eyr.png"
         ]
     },
     {
