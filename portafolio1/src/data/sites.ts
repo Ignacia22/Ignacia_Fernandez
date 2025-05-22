@@ -68,7 +68,7 @@ export const Sites: Sites2[] = [
         id: 5,
         color: "bg-gradient-to-r from-violet-300 to-purple-300",
         title: "121Expreso - ReactJS(Vite)",
-        desc: "Sitio web creado con WordPress y personalizado con Elementor Pro, logrando un diseño visual atractivo y completamente responsive. El proyecto fue implementado en un entorno de hosting gestionado mediante cPanel y Blue Hosting, lo que permitió una configuración eficiente del dominio, seguridad SSL y gestión de archivos.",
+        desc: "Reproductor web para una radio de rock en vivo, desarrollado con React, Vite y TypeScript. Incluye animaciones con Framer Motion, diseño responsivo, navegación con React Router y un formulario de contacto integrado con EmailJS. Pensado para transmitir la energía del rock con una experiencia fluida y moderna.",
         img: "https://res.cloudinary.com/dosbg5xdd/image/upload/v1745438505/Captura_de_pantalla_2025-04-23_154408_raaysu.png",
         link: "https://121expreso.com.ar",
         carouselImages: [
