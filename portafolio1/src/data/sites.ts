@@ -76,5 +76,18 @@ export const Sites: Sites2[] = [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746662915/Captura_de_pantalla_2025-05-07_200750_qasb7z.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746658817/Captura_de_pantalla_2025-05-07_185915_srs0hb.png"
         ]
+    }, 
+    {
+        id: 6,
+        color: "bg-gradient-to-r from-violet-300 to-purple-300",
+        title: "LibroMart - Angular(19)",
+        desc: "Catálogo web desarrollado con Angular 19, TypeScript y RxJS, donde puedes buscar libros por nombre, autor o categoría. Implementado con Angular Router para navegación y Angular Forms para la búsqueda. Ideal para explorar títulos rápidamente desde cualquier dispositivo.",
+        img: "https://res.cloudinary.com/dosbg5xdd/image/upload/v1745438505/Captura_de_pantalla_2025-04-23_154408_raaysu.png",
+        link: "https://libreria-angular.vercel.app/books",
+        carouselImages: [
+            "https://res.cloudinary.com/dosbg5xdd/image/upload/v1751307769/Captura_de_pantalla_2025-06-30_142109_hlidg3.png",
+            "https://res.cloudinary.com/dosbg5xdd/image/upload/v1751307768/Captura_de_pantalla_2025-06-30_142214_ywkcks.png",
+            "https://res.cloudinary.com/dosbg5xdd/image/upload/v1751307768/Captura_de_pantalla_2025-06-30_142140_hsybzl.png"
+        ]
     }
 ] 

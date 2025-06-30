@@ -90,6 +90,7 @@ const AboutPage = () => {
                         <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Next.js</div>
                         <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">React.js</div>
                         <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">HTML</div>
+                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Angular</div>
                         <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Node.js</div>
                         <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">PostgresSQL</div>
                         <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">MongoDB</div>
