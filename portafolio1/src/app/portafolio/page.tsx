@@ -143,49 +143,10 @@ const PortafolioPage = () => {
     >
       <div className="h-[600vh] relative" ref={ref}>
         <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center">
-          <motion.div className="relative">
-            <h1 className="text-6xl md:text-8xl text-center text-blue-950 font-bold relative z-10">
-              Mis Trabajos
-            </h1>
-            <motion.div
-              className="absolute -z-10 bg-gradient-to-r from-purple-200 to-violet-200 rounded-full opacity-70"
-              style={{
-                width: "120%",
-                height: "120%",
-                top: "-10%",
-                left: "-10%",
-              }}
-              animate={{
-                scale: [1, 1.2, 1],
-                rotate: [0, 5, 0],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-            />
-            <motion.div
-              className="absolute -z-20 bg-gradient-to-r from-violet-200 to-purple-200 rounded-full opacity-50"
-              style={{
-                width: "150%",
-                height: "150%",
-                top: "-25%",
-                left: "-25%",
-              }}
-              animate={{
-                scale: [1.2, 1, 1.2],
-                rotate: [0, -5, 0],
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                repeatType: "reverse",
-                delay: 1,
-              }}
-            />
-          </motion.div>
-        </div>
+    <h1 className="text-6xl md:text-8xl text-center text-blue-950 font-bold">
+      Mis Trabajos
+    </h1>
+  </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
             {/* Primer panel decorativo - también en tono morado */}
@@ -370,7 +331,7 @@ const PortafolioPage = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
+      <div className="w-screen h-screen flex flex-col gap-10 items-center justify-center text-center">
         <h1 className="text-6xl md:text-8xl font-bold">¿Tienes un proyecto?</h1>
         <div className="relative">
           <motion.svg
