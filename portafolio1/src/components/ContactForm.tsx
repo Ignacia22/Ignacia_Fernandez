@@ -157,12 +157,12 @@ const ContactForm = () => {
         <form 
             onSubmit={sendEmail}
             ref={form} 
-            className="w-full lg:w-1/2 bg-red-50 rounded-xl text-base sm:text-lg md:text-xl flex flex-col gap-4 justify-center p-6 sm:p-8 md:p-12 lg:p-16 m-4 sm:m-6 md:m-8 relative shadow-md"
+            className="w-full max-w-md bg-gradient-to-br from-red-50 to-purple-50 rounded-xl text-base sm:text-lg md:text-xl flex flex-col gap-4 justify-center p-6 sm:p-8 md:p-12 lg:p-16 m-4 sm:m-6 md:m-8 relative shadow-lg"
         >
             {/* Campo oculto para reCAPTCHA */}
             <div id="recaptcha-container" className="hidden"></div>
             
-            {/* Campo honeypot (trampa para bots) - estilizado para ser invisible para humanos */}
+            {/* Campo honeypot - sin cambios */}
             <div className="opacity-0 absolute top-0 left-0 h-0 w-0 -z-10 overflow-hidden">
                 <label htmlFor="website">Website</label>
                 <input
@@ -176,11 +176,41 @@ const ContactForm = () => {
                 />
             </div>
             
-            <span className="text-center sm:text-left">Estimada Igna Design <span className="text-xl sm:text-2xl">😊</span></span>
+            <div className="text-center sm:text-left mb-2">
+                <h2 className="text-xl font-medium text-gray-700">
+                    Estimada Igna Design <span className="text-2xl">😊</span>
+                </h2>
+            </div>
             
-            <div className="flex flex-col">
+            {/* EMAIL PRIMERO - como sugirió el feedback */}
+            <div className="flex flex-col mb-4">
+                <label className="block text-gray-700 mb-2">Tu mail es:</label>
+                <div className="flex flex-col">
+                    <input 
+                        name="user_email"
+                        type="email"
+                        className={`bg-white/70 border-2 ${emailError ? 'border-red-500' : 'border-purple-300'} outline-none rounded-lg p-3 text-gray-700 focus:border-purple-500 transition-colors`}
+                        value={email}
+                        onChange={(e) => {
+                            setEmail(e.target.value);
+                            if (validateEmail(e.target.value)) setEmailError("");
+                        }}
+                        placeholder="tu@email.com *"
+                        required
+                        aria-required="true"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    />
+                    {emailError && (
+                        <span className="text-red-500 text-sm mt-1">{emailError}</span>
+                    )}
+                </div>
+            </div>
+            
+            {/* MENSAJE DESPUÉS DEL EMAIL - con color destacado como sugirió el feedback */}
+            <div className="flex flex-col mb-4">
+                <label className="block text-gray-700 mb-2">Tu mensaje:</label>
                 <textarea 
-                    className={`bg-transparent border-b-2 ${messageError ? 'border-b-red-500' : 'border-b-black'} outline-none resize-none p-2 mb-1`}
+                    className={`bg-purple-100 border-2 ${messageError ? 'border-red-500' : 'border-purple-300'} outline-none resize-none p-3 min-h-[100px] text-gray-700 rounded-lg focus:border-purple-500 transition-colors`}
                     name="user_message"
                     value={message}
                     onChange={(e) => {
@@ -190,34 +220,14 @@ const ContactForm = () => {
                     placeholder="Escribe tu mensaje aquí... *"
                     required
                     aria-required="true"
-                    // En lugar de fijar rows, usamos altura mínima que se adapta
-                    style={{ minHeight: "80px", height: "15vh", maxHeight: "25vh" }}
                 />
                 {messageError && (
                     <span className="text-red-500 text-sm mt-1">{messageError}</span>
                 )}
             </div>
             
-            <span className="mt-2 sm:mt-4">Mi mail es:</span>
-            
-            <div className="flex flex-col">
-                <input 
-                    name="user_email"
-                    type="email"  // Cambio a type="email" para validación básica HTML
-                    className={`bg-transparent border-b-2 ${emailError ? 'border-b-red-500' : 'border-b-black'} outline-none p-2`}
-                    value={email}
-                    onChange={(e) => {
-                        setEmail(e.target.value);
-                        if (validateEmail(e.target.value)) setEmailError("");
-                    }}
-                    placeholder="tu@email.com *"
-                    required
-                    aria-required="true"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  // Patrón HTML para validación
-                />
-                {emailError && (
-                    <span className="text-red-500 text-sm mt-1">{emailError}</span>
-                )}
+            <div className="mb-4">
+                <p className="text-gray-700">Saludos</p>
             </div>
             
             {/* Campo oculto para almacenar token de reCAPTCHA */}
@@ -227,32 +237,32 @@ const ContactForm = () => {
                 value={recaptchaToken}
             />
             
-            <span className="mt-2 sm:mt-4">Saludos</span>
-            
-            <div className="flex flex-col items-center w-full mt-2 sm:mt-4">
+            {/* Botón con gradiente más atractivo */}
+            <div className="flex flex-col items-center mt-2">
                 <button 
                     type="submit" 
-                    className={`w-full sm:w-2/3 bg-purple-200 rounded font-semibold text-gray-600 p-3 sm:p-4 transition-all ${isSubmitting || submissionCount >= MAX_SUBMISSIONS ? 'opacity-70 cursor-not-allowed' : 'hover:bg-purple-300'}`}
+                    className={`w-full sm:w-2/3 bg-gradient-to-r from-purple-400 to-indigo-500 hover:from-purple-500 hover:to-indigo-600 text-white rounded-lg font-medium py-3 px-6 transition-all shadow-md ${isSubmitting || submissionCount >= MAX_SUBMISSIONS ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-lg transform hover:-translate-y-1'}`}
                     disabled={isSubmitting || submissionCount >= MAX_SUBMISSIONS}
                 >
                     {isSubmitting ? 'Enviando...' : submissionCount >= MAX_SUBMISSIONS ? 'Límite alcanzado' : 'Enviar'}
                 </button>
                 
                 {submissionCount > 0 && submissionCount < MAX_SUBMISSIONS && (
-                    <p className="text-gray-500 text-xs sm:text-sm mt-2 sm:mt-3">
+                    <p className="text-gray-600 text-sm mt-3">
                         Has enviado {submissionCount} de {MAX_SUBMISSIONS} mensajes permitidos.
                     </p>
                 )}
                 
-                <p className="text-gray-500 text-xs sm:text-sm mt-2 sm:mt-3">* Campos obligatorios</p>
+                <p className="text-gray-500 text-xs mt-3">* Campos obligatorios</p>
             </div>
             
+            {/* Mensajes de éxito/error - Con mejor animación */}
             {success && (
                 <motion.div 
-                    className="fixed bottom-4 left-4 right-4 mx-auto w-[90%] max-w-md bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded text-center shadow-md z-50"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    className="fixed bottom-16 left-4 right-4 mx-auto max-w-md bg-gradient-to-r from-green-100 to-emerald-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center shadow-lg z-50"
+                    initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.5, type: "spring" }}
                 >
                     <span className="font-semibold">¡Tu mensaje ha sido enviado!</span>
                     <p className="text-sm">Me pondré en contacto contigo pronto.</p>
@@ -261,15 +271,19 @@ const ContactForm = () => {
             
             {error && (
                 <motion.div 
-                    className="fixed bottom-4 left-4 right-4 mx-auto w-[90%] max-w-md bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded text-center shadow-md z-50"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    className="fixed bottom-16 left-4 right-4 mx-auto max-w-md bg-gradient-to-r from-red-100 to-pink-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg text-center shadow-lg z-50"
+                    initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.5, type: "spring" }}
                 >
                     <span className="font-semibold">Algo salió mal 😞</span>
                     <p className="text-sm">Por favor intenta nuevamente más tarde o contáctame directamente.</p>
                 </motion.div>
             )}
+            
+            {/* Elementos decorativos para más creatividad */}
+            <div className="absolute -top-6 -left-6 w-12 h-12 bg-gradient-to-br from-purple-300 to-pink-200 rounded-full mix-blend-multiply filter blur-sm opacity-70"></div>
+            <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-gradient-to-br from-blue-300 to-purple-200 rounded-full mix-blend-multiply filter blur-sm opacity-70"></div>
         </form>
     );
 };

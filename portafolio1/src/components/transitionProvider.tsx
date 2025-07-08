@@ -10,7 +10,7 @@ const TransitionProvider = ({children}: {children: React.ReactNode}) => {
 
     return (
         <AnimatePresence mode="wait">
-            <motion.div key={pathName} className="w-screen h-screen">
+            <motion.div key={pathName} className="w-screen min-h-screen"> {/* Cambiado h-screen a min-h-screen */}
                 <motion.div 
                     className="h-screen w-screen fixed bg-blue-950 rounded-b-[100px] z-40" 
                     animate={{height: "0vh"}} 
@@ -34,8 +34,8 @@ const TransitionProvider = ({children}: {children: React.ReactNode}) => {
                     animate={{height: "0vh", transition:{ delay: 0.5 }}}
                 />
                 
-                {/* IMAGEN DE FONDO */}
-                <div className="absolute inset-0 -z-10">
+                {/* IMAGEN DE FONDO - Cambiada a fixed para cubrir todo */}
+                <div className="fixed inset-0 -z-10"> {/* Cambiado absolute a fixed */}
                     <Image 
                         src="https://res.cloudinary.com/dosbg5xdd/image/upload/v1741316520/paisaje_h3eusy.jpg" 
                         alt="" 
@@ -46,9 +46,11 @@ const TransitionProvider = ({children}: {children: React.ReactNode}) => {
                     <div className="absolute inset-0 bg-gradient-to-b from-gray-300/70 to-blue-200/70 mix-blend-overlay"></div>
                 </div>
 
-                <div className="relative z-10 h-full">
+                <div className="relative z-10 min-h-screen"> {/* Cambiado h-full a min-h-screen */}
                     <div className="h-24 bg-white"><Navbar/></div>
-                    <div className="h-[calc(100vh-6rem)]">{children}</div>
+                    <div className="min-h-[calc(100vh-6rem)]"> {/* CAMBIO CRUCIAL: h-[calc(100vh-6rem)] a min-h-[calc(100vh-6rem)] */}
+                        {children}
+                    </div>
                 </div>
             </motion.div>
         </AnimatePresence>

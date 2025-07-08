@@ -4,11 +4,8 @@ import Cartoon from "@/components/cartoon";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-
 const AboutPage = () => {
-
     const skillRef = useRef<HTMLDivElement | null>(null)
-    //const isSkillRefInView = useInView(skillRef, {once: true})
     const isSkillRefInView = useInView(skillRef, {margin:"-100px"})
 
     const experienceRef = useRef<HTMLDivElement | null>(null)
@@ -16,22 +13,22 @@ const AboutPage = () => {
 
     return (
         <motion.div 
-        className="h-full" 
+        className="min-h-screen" 
         initial={{y:"-200vh"}} 
         animate={{y:"0%"}} 
         transition={{duration: 1}}
         >
            {/* CONTAINER */}
-           <div className="h-full overflow-scroll lg:flex">
+           <div className="min-h-screen lg:flex">
             {/* TEXT CONTAINER */}
-            <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 pr-0 w-2/3 xl:1/2 text-blue-950">
+            <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 xl:w-1/2 text-blue-950">
                 {/* Bio CONTAINER */}
                 <div className="flex flex-col gap-12 justify-center">
                     {/* TITLE */}
                     <h1 className="font-bold text-3xl">BIOGRAFIA</h1>
                     {/* DESCRIPTION */}
                     <p className="text-lg">
-                       Soy una desarrolladora Frontend Junior y diseñadora web que transforma ideas en experiencias digitales         cautivadoras. Mi enfoque combina código limpio con principios de diseño centrado en el usuario, creando interfaces         que no solo se ven increíbles sino que también funcionan de manera intuitiva. A través de mi trabajo, busco el         equilibrio perfecto entre estética y funcionalidad, utilizando las últimas tecnologías web para dar vida a         proyectos únicos que destacan en el mundo digital.
+                       Soy una desarrolladora Frontend Junior y diseñadora web que transforma ideas en experiencias digitales cautivadoras. Mi enfoque combina código limpio con principios de diseño centrado en el usuario, creando interfaces que no solo se ven increíbles sino que también funcionan de manera intuitiva. A través de mi trabajo, busco el equilibrio perfecto entre estética y funcionalidad, utilizando las últimas tecnologías web para dar vida a proyectos únicos que destacan en el mundo digital.
                     </p>
                     {/* QUOTE */}
                     <span className="italic">
@@ -65,7 +62,6 @@ const AboutPage = () => {
                     strokeLinecap="round"
                     />
                     </motion.svg>
-
                     </div>
                 </div>
 
@@ -85,20 +81,20 @@ const AboutPage = () => {
                     animate={isSkillRefInView ? {x:0} : {}} 
                     className="flex gap-4 flex-wrap"
                     >
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Javascript</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">TypeScript</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Next.js</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">React.js</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">HTML</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Angular</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Node.js</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">PostgresSQL</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">MongoDB</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Tailwind</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Bootstrap</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Wordpress</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Elementor</div>
-                        <div className=" rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Figma</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Javascript</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">TypeScript</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Next.js</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">React.js</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">HTML</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Angular</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Node.js</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">PostgresSQL</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">MongoDB</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Tailwind</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Bootstrap</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Wordpress</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Elementor</div>
+                        <div className="rounded p-2 text-sm cursor-pointer bg-blue-950 text-white hover:bg-slate-200 hover:text-black">Figma</div>
                     </motion.div>
 
                     {/* SKILL SCROLL SVG */}
@@ -129,9 +125,7 @@ const AboutPage = () => {
                     strokeLinecap="round"
                     />
                     </motion.svg>
-
-                    </div>
-
+                </div>
 
                 {/* EXPERIENCE CONTAINER */}
                 <div className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
@@ -141,7 +135,7 @@ const AboutPage = () => {
                     animate={isExperienceRefInView ? {x:"0"} : {}} 
                     transition={{delay:0.2}} 
                     className="font-bold text-3xl"
-                    >STUDIOS
+                    >ESTUDIOS
                     </motion.h1>
                     {/* EXPERIENCE LIST */}
                     <motion.div 
@@ -152,49 +146,44 @@ const AboutPage = () => {
                         {/* EXPERIENCE LIST ITEM */}
                         <div className="flex justify-between h-48">
                             {/* LEFT */}
-                            <div className="w-1/3 ">
+                            <div className="w-1/3">
                                 {/* TITLE */}
                                 <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                                    Tecnico en Nivel Superior en Diseño Web
+                                    Técnico en Nivel Superior en Diseño Web
                                 </div>
                                 {/* DESCRIPTION */}
                                 <div className="p-3 text-sm italic">Especialización en diseño UX/UI y desarrollo de interfaces web atractivas y funcionales orientadas al usuario.</div>
                                 {/* DATE */}
                                 <div className="p-3 text-red-500 text-sm font-semibold">mar. 2020 - jun. 2022</div>
                                 {/* INSTITUTION */}
-                                <div className="p-1 rounded bg-white text-sm font-semibold w-fit">INACAP (Centro de Formación Tecnica de Chile)</div>
+                                <div className="p-1 rounded bg-white text-sm font-semibold w-fit">INACAP (Centro de Formación Técnica de Chile)</div>
                             </div>
                             {/* CENTER */}
                             <div className="w-1/6">
                                 {/* LINE */}
                                 <div className="w-1 h-full bg-gray-600 rounded relative">
                                     {/* CIRCLE */}
-                                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
-
-                                    </div>
+                                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
                                 </div>
                             </div>
-                            {/* RIGTH */}
-                            <div className="w-1/3 "></div>
+                            {/* RIGHT */}
+                            <div className="w-1/3"></div>
                         </div>
 
-                        
                         {/* EXPERIENCE LIST ITEM */}
                         <div className="flex justify-between h-48">
                             {/* LEFT */}
-                            <div className="w-1/3 "></div>
+                            <div className="w-1/3"></div>
                             {/* CENTER */}
                             <div className="w-1/6">
                                 {/* LINE */}
                                 <div className="w-1 h-full bg-gray-600 rounded relative">
                                     {/* CIRCLE */}
-                                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2">
-
-                                    </div>
+                                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
                                 </div>
                             </div>
-                            {/* RIGTH */}
-                            <div className="w-1/3 ">
+                            {/* RIGHT */}
+                            <div className="w-1/3">
                               {/* TITLE */}
                               <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
                                     Desarrolladora Frontend Junior
@@ -207,13 +196,16 @@ const AboutPage = () => {
                                 <div className="p-1 rounded bg-white text-sm font-semibold w-fit">Henry Bootcamp</div>
                             </div>
                         </div>
-
                     </motion.div>
                 </div>
             </div>
-            {/* IMAGE CONTAINER */}
-            <div className="hidden lg:block w-1/3 sticky top-0 xl:1/2 z-30">
-               <Cartoon/>
+            {/* IMAGE CONTAINER - STICKY CORREGIDO */}
+            <div className="hidden lg:block lg:w-1/3 xl:w-1/2">
+                <div className="sticky top-24 h-screen flex items-center justify-center">
+                    <div className="w-full h-full flex items-center justify-center">
+                        <Cartoon/>
+                    </div>
+                </div>
             </div>
            </div>
         </motion.div>

@@ -7,25 +7,25 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <motion.div 
-      className="h-full" 
+      className="min-h-[calc(100vh-6rem)]" 
       initial={{y:"-200vh"}} 
       animate={{y:"0%"}} 
       transition={{duration: 1}}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-        {/* IMAGE CONTAINER - Ajustado para trabajar con TransitionProvider */}
-        <div className="h-[30vh] sm:h-[35vh] md:h-[40vh] lg:h-full lg:w-1/2 relative">
+      <div className="min-h-[calc(100vh-6rem)] flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+        {/* IMAGE CONTAINER - TAMAÑO COMPLETO */}
+        <div className="h-[30vh] sm:h-[35vh] md:h-[40vh] lg:h-[calc(100vh-6rem)] lg:w-1/2 relative">
           <Image 
             src="https://res.cloudinary.com/dosbg5xdd/image/upload/v1741316660/anime_zflcrc.png" 
             alt="portada"
             fill 
-            className="object-contain lg:object-cover"
+            className="object-contain lg:object-cover lg:object-left"
             priority
           />
         </div>
         
         {/* TEXT CONTAINER - Optimizado para el espacio limitado */}
-        <div className="flex-1 lg:h-full lg:w-1/2 flex flex-col gap-3 sm:gap-4 lg:gap-6 items-center justify-start lg:justify-center pt-2 lg:pt-0 text-blue-950">
+        <div className="flex-1 lg:h-[calc(100vh-6rem)] lg:w-1/2 flex flex-col gap-3 sm:gap-4 lg:gap-6 items-center justify-start lg:justify-center pt-2 lg:pt-0 text-blue-950">
           {/* TITLE - Tamaño reducido para ajustarse mejor */}
           <h1 className="text-xl sm:text-2xl sm:mt-10 md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center lg:text-left">
             Vive la experiencia digital. Diseña conmigo

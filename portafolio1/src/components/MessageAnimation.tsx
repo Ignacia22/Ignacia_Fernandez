@@ -8,7 +8,7 @@ interface MessageAnimationProps {
 
 const MessageAnimation = ({ text }: MessageAnimationProps) => {
     return (
-        <div>
+        <div className="relative z-10 text-4xl sm:text-5xl md:text-6xl text-gray-700"> {/* Añadido z-10 y tamaños de texto responsivos */}
             {text.split("").map((letter, index) => (
                 <motion.span 
                     key={index} 
@@ -19,7 +19,7 @@ const MessageAnimation = ({ text }: MessageAnimationProps) => {
                     {letter}
                 </motion.span>
             ))}
-            😋
+            <span className="absolute -right-14 text-4xl sm:text-5xl md:text-6xl">😋</span>
         </div>
     );
 };
