@@ -52,7 +52,6 @@ export const Sites: Sites2[] = [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1747344376/Captura_de_pantalla_2025-05-15_172545_sn1eyr.png"
         ],
         github: "https://github.com/Ignacia22/Hospital-front"
-        ]
 
     },
     {
