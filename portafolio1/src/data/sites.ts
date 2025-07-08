@@ -9,7 +9,6 @@ export type Sites2 = {
     github: string;
 } 
 
-
 export const Sites: Sites2[] = [
     {
         id: 1,
@@ -95,4 +94,4 @@ export const Sites: Sites2[] = [
         ],
         github: "https://github.com/Ignacia22/libreria-angular"
     }
-] 
+]
