@@ -15,8 +15,40 @@ const PortafolioPage = () => {
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85%"]);
   
-  // Inicializar el estado con todos los IDs de los sitios
+  // Estado para el panel deslizante
   const [activeImages, setActiveImages] = useState<ActiveImagesType>({});
+  
+  // Estado para navegación entre proyectos en móvil
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  
+  // Funciones para navegar entre proyectos
+  const goToPrevProject = () => {
+    // Calcula el porcentaje de desplazamiento necesario para el proyecto anterior
+    const newIndex = currentProjectIndex > 0 ? currentProjectIndex - 1 : Sites.length - 1;
+    setCurrentProjectIndex(newIndex);
+    
+    // Calcula la posición de desplazamiento para el nuevo proyecto
+    const scrollPosition = (newIndex + 1) * (1 / (Sites.length + 1));
+    const targetScroll = scrollPosition * document.documentElement.scrollHeight;
+    window.scrollTo({
+      top: targetScroll,
+      behavior: 'smooth'
+    });
+  };
+  
+  const goToNextProject = () => {
+    // Calcula el porcentaje de desplazamiento necesario para el siguiente proyecto
+    const newIndex = currentProjectIndex < Sites.length - 1 ? currentProjectIndex + 1 : 0;
+    setCurrentProjectIndex(newIndex);
+    
+    // Calcula la posición de desplazamiento para el nuevo proyecto
+    const scrollPosition = (newIndex + 1) * (1 / (Sites.length + 1));
+    const targetScroll = scrollPosition * document.documentElement.scrollHeight;
+    window.scrollTo({
+      top: targetScroll,
+      behavior: 'smooth'
+    });
+  };
   
   // Inicializar el estado correctamente al cargar
   useEffect(() => {
@@ -143,10 +175,10 @@ const PortafolioPage = () => {
     >
       <div className="h-[600vh] relative" ref={ref}>
         <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center">
-    <h1 className="text-6xl md:text-8xl text-center text-blue-950 font-bold">
-      Mis Trabajos
-    </h1>
-  </div>
+          <h1 className="text-6xl md:text-8xl text-center text-blue-950 font-bold">
+            Mis Trabajos
+          </h1>
+        </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
             {/* Primer panel decorativo - también en tono morado */}
@@ -321,6 +353,19 @@ const PortafolioPage = () => {
                               ↗
                             </span>
                           </Link>
+                          
+                          {/* Agregar enlace al repositorio si existe */}
+                          {site.github && (
+                            <Link 
+                              href={site.github}
+                              className="flex items-center gap-2 bg-white/20 text-white px-4 py-3 rounded-lg font-medium hover:bg-white/30"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Código
+                              <span aria-hidden="true">⌨️</span>
+                            </Link>
+                          )}
                         </motion.div>
                       </motion.div>
                     </div>
@@ -330,7 +375,26 @@ const PortafolioPage = () => {
             })}
           </motion.div>
         </div>
+        
+        {/* Controles de navegación fijos para móvil - NUEVO */}
+        <div className="fixed bottom-24 left-0 right-0 flex justify-center gap-4 z-30 md:hidden">
+          <button 
+            onClick={goToPrevProject}
+            className="w-14 h-14 bg-blue-950 text-white rounded-full flex items-center justify-center shadow-lg"
+            aria-label="Proyecto anterior"
+          >
+            <span className="text-2xl">←</span>
+          </button>
+          <button 
+            onClick={goToNextProject}
+            className="w-14 h-14 bg-blue-950 text-white rounded-full flex items-center justify-center shadow-lg"
+            aria-label="Proyecto siguiente"
+          >
+            <span className="text-2xl">→</span>
+          </button>
+        </div>
       </div>
+      
       <div className="w-screen h-screen flex flex-col gap-10 items-center justify-center text-center">
         <h1 className="text-6xl md:text-8xl font-bold">¿Tienes un proyecto?</h1>
         <div className="relative">
@@ -360,10 +424,19 @@ const PortafolioPage = () => {
             href="/contact"
             className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
           >
-            CONTÁCTAME
+            <span className="text-sm md:text-base whitespace-nowrap">CONTÁCTAME</span>
           </Link>
         </div>
       </div>
+      
+      {/* Footer de navegación fijo - NUEVO */}
+      <footer className="fixed bottom-0 left-0 right-0 bg-blue-950/80 backdrop-blur-sm text-white py-2 z-20">
+        <div className="container mx-auto flex justify-center gap-6">
+          <Link href="/" className="px-3 py-1 hover:bg-white/20 rounded transition-colors">Inicio</Link>
+          <Link href="/portafolio" className="px-3 py-1 hover:bg-white/20 rounded transition-colors">Trabajos</Link>
+          <Link href="/contact" className="px-3 py-1 hover:bg-white/20 rounded transition-colors">Contacto</Link>
+        </div>
+      </footer>
     </motion.div>
   );
 };

@@ -6,11 +6,35 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 
-/* @media (min-width: 1300px) and (max-width: 1500px) {
-  .contact-form-gaming {
-    margin-top: 4rem !important;
-    margin-bottom: 4rem !important;
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
-} */
+/* Animaciones para elementos decorativos */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradientes más vibrantes para backgrounds */
+.bg-gradient-cool {
+  background: linear-gradient(135deg, #a78bfa, #818cf8, #93c5fd);
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Efecto de neón sutil para destacar elementos */
+.text-glow {
+  text-shadow: 0 0 5px rgba(167, 139, 250, 0.5), 0 0 10px rgba(167, 139, 250, 0.3);
+}
+
+.box-glow {
+  box-shadow: 0 0 15px rgba(167, 139, 250, 0.5);
+}

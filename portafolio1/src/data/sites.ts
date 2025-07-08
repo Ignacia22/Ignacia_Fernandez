@@ -6,6 +6,7 @@ export type Sites2 = {
     img: string;
     link: string;
     carouselImages: string[];
+    github: string;
 } 
 
 
@@ -21,7 +22,8 @@ export const Sites: Sites2[] = [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1742855975/Captura_de_pantalla_2025-02-16_180433_zjwbdo.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1745440293/Captura_de_pantalla_2025-04-23_162935_xo311f.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1745440294/Captura_de_pantalla_2025-04-23_163041_lvz00c.png"
-        ]
+        ],
+        github: "https://github.com/Ignacia22/ClubActiveCenter"
     },
     {
         id: 2,
@@ -34,7 +36,8 @@ export const Sites: Sites2[] = [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1742933302/imagen_2025-03-25_170817931_pzjhzr.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1745440963/Captura_de_pantalla_2025-04-23_163952_vldxpy.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1745440963/Captura_de_pantalla_2025-04-23_164137_erinkf.png"
-        ]
+        ],
+        github: "https://github.com/Ignacia22/E-commers-Tecno"
     },
     {
         id: 3,
@@ -48,6 +51,8 @@ export const Sites: Sites2[] = [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1743034896/Captura_de_pantalla_2025-03-26_191925_jdgiux.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1747344376/Captura_de_pantalla_2025-05-15_172514_evhjuy.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1747344376/Captura_de_pantalla_2025-05-15_172545_sn1eyr.png"
+        ],
+        github: "https://github.com/Ignacia22/Hospital-front"
         ]
 
     },
@@ -62,7 +67,8 @@ export const Sites: Sites2[] = [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1745438505/Captura_de_pantalla_2025-04-23_154408_raaysu.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1745440612/Captura_de_pantalla_2025-04-23_163456_z1m9wx.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1745440613/Captura_de_pantalla_2025-04-23_163611_xddftg.png"
-        ]
+        ],
+        github: ""
     },
     {
         id: 5,
@@ -75,7 +81,8 @@ export const Sites: Sites2[] = [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746658693/121expreso-imagenSitio_to4ctk.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746662915/Captura_de_pantalla_2025-05-07_200750_qasb7z.png", 
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746658817/Captura_de_pantalla_2025-05-07_185915_srs0hb.png"
-        ]
+        ],
+        github: "https://github.com/R-Alejandro-U/121expreso"
     }, 
     {
         id: 6,
@@ -88,6 +95,7 @@ export const Sites: Sites2[] = [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1751307769/Captura_de_pantalla_2025-06-30_142109_hlidg3.png",
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1751307768/Captura_de_pantalla_2025-06-30_142214_ywkcks.png",
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1751307768/Captura_de_pantalla_2025-06-30_142140_hsybzl.png"
-        ]
+        ],
+        github: "https://github.com/Ignacia22/libreria-angular"
     }
 ] 

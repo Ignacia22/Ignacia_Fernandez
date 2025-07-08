@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import TransitionProvider from "@/components/transitionProvider";
+import ColorfulBackground from "@/components/ColorfulBackground";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} antialiased`}
       >
+        <ColorfulBackground/>
         <TransitionProvider>{children}</TransitionProvider>
       </body>
     </html>
