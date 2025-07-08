@@ -9,7 +9,6 @@ export type Sites2 = {
     github: string;
 } 
 
-
 export const Sites: Sites2[] = [
     {
         id: 1,
@@ -53,7 +52,6 @@ export const Sites: Sites2[] = [
             "https://res.cloudinary.com/dosbg5xdd/image/upload/v1747344376/Captura_de_pantalla_2025-05-15_172545_sn1eyr.png"
         ],
         github: "https://github.com/Ignacia22/Hospital-front"
-        ]
 
     },
     {
@@ -98,4 +96,4 @@ export const Sites: Sites2[] = [
         ],
         github: "https://github.com/Ignacia22/libreria-angular"
     }
-] 
+]
