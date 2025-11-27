@@ -79,7 +79,7 @@ export const Sites: Sites2[] = [
       "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746662915/Captura_de_pantalla_2025-05-07_200750_qasb7z.png",
       "https://res.cloudinary.com/dosbg5xdd/image/upload/v1746658817/Captura_de_pantalla_2025-05-07_185915_srs0hb.png",
     ],
-    github: "https://github.com/R-Alejandro-U/121expreso",
+    github: "https://github.com/Ignacia22/121expreso",
   },
   {
     id: 6,
