@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
                 <Link href="https://www.linkedin.com/in/maria-ignacia-fernández-a65a90252/">
                   <Image src="/linkedin.png" alt="" width={24} height={24}/>
                 </Link>
-                <Link href="https://drive.google.com/drive/folders/1xx6Di_gO309uV6X8Eg_p0wTWQssp4hEn?usp=drive_link">
+                <Link href="https://docs.google.com/document/d/1wQ0L2itT11LmYLANaPI6r10DeKK4hWmD/edit?usp=sharing&ouid=110807804075749061967&rtpof=true&sd=true">
                   <Image src="/cv.png" alt="" width={24} height={24}/>
                 </Link>
             </div>
