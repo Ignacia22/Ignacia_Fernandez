@@ -31,25 +31,28 @@ export const ContactFormFields = ({
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <label
-          className="block text-sm font-black text-black mb-3"
+          className="block text-sm font-black text-black mb-3 focus:ring-2 focus:ring-white/30"
           style={{ fontFamily: 'Open Sans' }}
         >
           Nombre:
         </label>
         <input
-          type="text"
-          name="user_name"
-          value={formData.user_name}
-          onChange={handleChange}
-          placeholder="Tu nombre"
-          disabled={isLimitReached || isSubmitting}
-          className={`w-full px-5 py-3 rounded-lg border-2 transition-colors outline-none text-black placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed ${
+        type="text"
+        name="user_name"
+        value={formData.user_name}
+        onChange={handleChange}
+        placeholder="Tu nombre"
+        disabled={isLimitReached || isSubmitting}
+        className={`w-full px-5 py-3 rounded-lg border transition-colors outline-none 
+          text-black placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed
+          ${
             fieldErrors.user_name
               ? 'border-red-500 focus:border-red-600'
-              : 'border-black focus:border-black'
+              : 'border-gray-300 focus:border-gray-500'
           }`}
-          style={{ fontFamily: 'Open Sans' }}
-        />
+        style={{ fontFamily: 'Open Sans' }}
+      />
+
         {fieldErrors.user_name && (
           <p className="text-red-500 text-xs mt-1">{fieldErrors.user_name}</p>
         )}
@@ -66,7 +69,7 @@ export const ContactFormFields = ({
           className="block text-sm font-semibold text-black mb-3"
           style={{ fontFamily: 'Open Sans' }}
         >
-          Email:
+          ¿Dónde te escribo? *
         </label>
         <input
           type="email"
@@ -75,10 +78,11 @@ export const ContactFormFields = ({
           onChange={handleChange}
           placeholder="tu@email.com"
           disabled={isLimitReached || isSubmitting}
-          className={`w-full px-5 py-3 rounded-lg border-2 transition-colors outline-none text-black placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed ${
+          className={`w-full px-5 py-3 rounded-lg border transition-colors outline-none 
+          text-black placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed ${
             fieldErrors.user_email
               ? 'border-red-500 focus:border-red-600'
-              : 'border-black focus:border-black'
+              : 'border-gray-300 focus:border-gray-500'
           }`}
           style={{ fontFamily: 'Open Sans' }}
         />
@@ -98,7 +102,7 @@ export const ContactFormFields = ({
           className="block text-sm font-semibold text-black mb-3"
           style={{ fontFamily: 'Open Sans' }}
         >
-          Mensaje:
+          Tu mensaje *
         </label>
         <textarea
           name="user_message"
@@ -107,10 +111,11 @@ export const ContactFormFields = ({
           placeholder="Cuéntame qué tienes en mente..."
           rows={6}
           disabled={isLimitReached || isSubmitting}
-          className={`w-full px-5 py-3 rounded-lg border-2 transition-colors outline-none text-black placeholder-gray-400 resize-none disabled:opacity-50 disabled:cursor-not-allowed ${
+          className={`w-full px-5 py-3 rounded-lg border transition-colors outline-none 
+          text-black placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed ${
             fieldErrors.user_message
               ? 'border-red-500 focus:border-red-600'
-              : 'border-black focus:border-black'
+              : 'border-gray-300 focus:border-gray-500'
           }`}
           style={{ fontFamily: 'Open Sans' }}
         />

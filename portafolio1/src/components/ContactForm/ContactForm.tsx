@@ -35,7 +35,7 @@ export const ContactForm = () => {
   const [formLoadTime, setFormLoadTime] = useState(0)
   
   const form = useRef<HTMLFormElement>(null)
-  const MAX_SUBMISSIONS = 3
+  const MAX_SUBMISSIONS = 100
   const SUBMISSION_TIMEOUT = 86400000 // 24 horas
 
   useEffect(() => {
@@ -185,7 +185,7 @@ export const ContactForm = () => {
           Hablemos <span className="text-yellow-400">✨</span>
         </h1>
         <p
-          className="text-sm sm:text-base text-gray-200 max-w-2xl mx-auto"
+          className="text-gray-400 text-sm sm:text-base max-w-xl text-center mx-auto mt-2"
           style={{ fontFamily: 'Open Sans' }}
         >
           Prometo responder más rápido que cuando el deploy falla. Escríbeme y vemos qué podemos crear junt@s.

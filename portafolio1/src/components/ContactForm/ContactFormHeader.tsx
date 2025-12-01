@@ -24,14 +24,15 @@ export const ContactFormHeader = ({
           className="text-sm sm:text-lg text-black leading-relaxed uppercase font-medium"
           style={{ fontFamily: 'Open Sans' }}
         >
-          ¡Qué emoción que quieras escribirme! 😊 <br/>Déjame tu nombre, tu correo y cuéntame en qué estás pensando. Te respondo apenas pueda.
+          ¡Qué emoción que quieras escribirme! 🤎 <br/>
+          Cuéntame tu nombre, tu correo y qué tienes en mente. Te respondo apenas pueda <br/> (prometo no desaparecer como cuando falla el deploy).
         </p>
       </motion.div>
 
       {/* SUBMISSION COUNTER */}
       {submissionCount > 0 && (
         <motion.div
-          className="mb-6 text-center"
+          className="mb-6 text-center mt-[-10px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
