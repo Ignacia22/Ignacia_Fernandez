@@ -2,9 +2,15 @@ import { motion } from "framer-motion"
 
 interface ErrorMessageProps {
   isLimitReached: boolean
+  error: string | null 
 }
 
-export const ErrorMessage = ({ isLimitReached }: ErrorMessageProps) => {
+export const ErrorMessage = ({ isLimitReached, error }: ErrorMessageProps) => {
+  // ✅ Solo renderizar si hay error o límite alcanzado
+  if (!error && !isLimitReached) {
+    return null
+  }
+
   return (
     <motion.div
       className="fixed bottom-8 left-4 right-4 max-w-md mx-auto bg-red-50 border-2 border-red-400 rounded-lg p-4 shadow-lg z-50"
@@ -19,7 +25,7 @@ export const ErrorMessage = ({ isLimitReached }: ErrorMessageProps) => {
       <p className="text-red-600 text-sm text-center mt-1" style={{ fontFamily: 'Open Sans' }}>
         {isLimitReached
           ? 'Vuelve en 24 horas para enviar más mensajes.'
-          : 'Por favor intenta nuevamente o contáctame en redes.'}
+          : error || 'Por favor intenta nuevamente o contáctame en redes.'}
       </p>
     </motion.div>
   )

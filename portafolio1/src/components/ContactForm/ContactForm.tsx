@@ -26,7 +26,7 @@ export const ContactForm = () => {
   })
   
   const [success, setSuccess] = useState(false)
-  const [error, setError] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [fieldErrors, setFieldErrors] = useState<Partial<FormData>>({})
   const [honeypot, setHoneypot] = useState("")
@@ -79,13 +79,13 @@ export const ContactForm = () => {
     }
 
     if (submissionCount >= MAX_SUBMISSIONS) {
-      setError(true)
+      setError(null)
       return false
     }
 
     if (isBotSubmission(honeypot, formLoadTime, recaptchaToken)) {
       console.log("Posible envío de bot detectado")
-      setError(true)
+      setError(null)
       return false
     }
 
@@ -109,7 +109,7 @@ export const ContactForm = () => {
 
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setError(false)
+    setError(null)
     setSuccess(false)
 
     try {
@@ -130,7 +130,7 @@ export const ContactForm = () => {
 
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
       console.error('Faltan las credenciales de EmailJS')
-      setError(true)
+      setError(null)
       setIsSubmitting(false)
       return
     }
@@ -159,7 +159,7 @@ export const ContactForm = () => {
         setTimeout(() => setSuccess(false), 5000)
       } catch (error) {
         console.error('Error enviando email:', error)
-        setError(true)
+        setError(null)
       } finally {
         setIsSubmitting(false)
       }
@@ -185,7 +185,7 @@ export const ContactForm = () => {
           Hablemos <span className="text-yellow-400">✨</span>
         </h1>
         <p
-          className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto"
+          className="text-sm sm:text-base text-gray-200 max-w-2xl mx-auto"
           style={{ fontFamily: 'Open Sans' }}
         >
           Prometo responder más rápido que cuando el deploy falla. Escríbeme y vemos qué podemos crear junt@s.
@@ -253,7 +253,7 @@ export const ContactForm = () => {
       {success && <SuccessMessage />}
 
       {/* ERROR MESSAGE */}
-      {error && <ErrorMessage isLimitReached={isLimitReached} />}
+      {error && <ErrorMessage isLimitReached={isLimitReached} error={error} />}
 
       {/* BACK TO HOME LINK */}
       <motion.div
