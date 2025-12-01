@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ignacia-fernandez.vercel.app/sitemap.xml

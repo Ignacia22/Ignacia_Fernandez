@@ -22,11 +22,11 @@ export const ContactFormButton = ({
         className={`px-10 py-3 rounded-lg font-semibold transition-all duration-300 transform ${
           isLimitReached
             ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
-            : 'bg-black text-white hover:bg-gray-900 hover:scale-105'
+            : 'bg-black text-white hover:bg-gray-900 hover:scale-[1.02] transition duration-300'
         } disabled:opacity-70`}
         style={{ fontFamily: 'Open Sans' }}
       >
-        {isSubmitting ? 'Enviando...' : isLimitReached ? 'Límite alcanzado' : 'Enviar'}
+        {isSubmitting ? 'Enviando...' : isLimitReached ? 'Límite alcanzado' : '¡Listo, mándalo! 🚀'}
       </button>
     </motion.div>
   )

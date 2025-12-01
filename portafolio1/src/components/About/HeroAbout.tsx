@@ -53,29 +53,37 @@ export const HeroAbout = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div 
-          className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center p-4 lg:p-8"
+        <div
+          className="
+            relative 
+            w-full 
+            h-full
+            rounded-2xl
+            overflow-hidden
+
+            brightness-110 
+            contrast-110
+            opacity-95
+
+            shadow-[0_20px_40px_rgba(0,0,0,0.25)]
+            transition-all
+            duration-500
+            hover:opacity-100
+            hover:brightness-115
+            hover:contrast-115
+            hover:-translate-y-1
+          "
         >
-          <div 
-            style={{ 
-              borderRadius: '16px',
-              overflow: 'hidden',
-              boxShadow: '0 20px 20px rgba(158, 158, 158, 0.5)',
-              width: '100%',
-              height: '100%',
-              position: 'relative'
-            }}
-          >
-            <Image 
-              src="https://res.cloudinary.com/dosbg5xdd/image/upload/v1764555379/WhatsApp_Image_2025-11-29_at_9.16.10_PM-modified_efk0bw.jpg"
-              alt="Ignacia - About"
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 90vw, 80vw"
-            />
-          </div>
+          <Image
+            src="https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1764555379/WhatsApp_Image_2025-11-29_at_9.16.10_PM-modified_efk0bw.jpg"
+            alt="Ignacia - About"
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 90vw, 80vw"
+          />
         </div>
+
       </motion.div>
     </div>
   )

@@ -22,7 +22,7 @@ const HeroSection = ({  description }: HeroSectionProps) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Contenido Izquierdo */}
           <motion.div
-            className="w-full"
+            className="w-full order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -73,11 +73,11 @@ const HeroSection = ({  description }: HeroSectionProps) => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-full"
+            className="w-full order-1 lg:order-2"
           >
             <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://res.cloudinary.com/dosbg5xdd/image/upload/v1764436052/mitchell-luo-kXH2437dnJA-unsplash_gseq4i.jpg"
+                src="https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1764436052/mitchell-luo-kXH2437dnJA-unsplash_gseq4i.jpg"
                 alt="Featured project"
                 fill
                 className="object-cover"

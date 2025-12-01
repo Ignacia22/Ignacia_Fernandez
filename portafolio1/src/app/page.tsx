@@ -21,7 +21,7 @@ export default function HomePage() {
       <div className="min-h-[calc(100vh-6rem)] flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 py-8 lg:py-0 gap-8 lg:gap-12">
         
         {/* TEXT CONTAINER - Left side on desktop */}
-        <div className="flex-1 flex flex-col gap-6 sm:gap-8 items-start justify-center py-20 lg:py-[9rem]">
+        <div className="flex-1 flex flex-col gap-6 sm:gap-8 items-start justify-center py-20 lg:py-[9rem] lg:pr-10">
           
           {/* TITLE - Javanese Text */}
           <motion.div
@@ -114,26 +114,46 @@ export default function HomePage() {
 
         {/* IMAGE CONTAINER - Right side on desktop */}
         <motion.div 
-          className="flex-1 relative w-full lg:w-4/5 flex items-center justify-center top-4"
-          style={{ 
-            minHeight: '400px',
-            borderRadius: '12px',
-            boxShadow: 'rgba(158, 158, 158, 0.3) 17px 15px 4px 0',
-            overflow: 'hidden'
-          }}
+          className="
+            relative
+            w-full 
+            lg:w-4/5 
+            flex 
+            items-center 
+            justify-center 
+            top-4
+    
+            min-h-[400px]
+            rounded-xl
+            overflow-hidden
+
+            brightness-110
+            contrast-110
+            shadow-[0_25px_60px_rgba(0,0,0,0.35)]
+            opacity-95
+
+            transition-all
+            duration-500
+            hover:opacity-100
+            hover:brightness-125
+            hover:contrast-125
+            hover:-translate-y-1
+          "
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <Image 
-            src="https://res.cloudinary.com/dosbg5xdd/image/upload/v1764436044/pexels-pixabay-208984_scftxt.jpg" 
-            alt="Ignacia - Developer & Designer"
+            src="https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1764436044/pexels-pixabay-208984_scftxt.jpg" 
+           alt="Ignacia - Developer & Designer"
             fill
             className="object-cover"
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 80vw"
           />
         </motion.div>
+
+
       </div>
 
       {/* ACCORDION SECTION */}

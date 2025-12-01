@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 
 interface ProjectCarouselProps {
@@ -23,22 +24,51 @@ const ProjectCarousel = ({
   if (!images || images.length === 0) return null;
 
   return (
-    <div className="relative w-full h-[300px] md:h-[450px] bg-gray-900 overflow-hidden">
+    <div className="relative w-full aspect-[4/3] md:aspect-[5/3] lg:aspect-[16/9] bg-gray-900 overflow-hidden border border-white/10 rounded-xl">
       {/* Imagen */}
       {images[activeIndex] && (
-        <>
-          <motion.img
-            key={activeIndex}
-            src={images[activeIndex]}
-            alt={`${title} - Imagen ${activeIndex + 1}`}
-            className="w-full h-full object-cover"
-            initial={{ opacity: 0, scale: 1.1 }}
+        <div className="absolute inset-0 w-full h-full">
+
+          {/* Fondo blur */}
+          <motion.div
+            key={`blur-${activeIndex}`}
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Image
+              src={images[activeIndex]}
+              alt=""
+              fill
+              className="object-cover blur-xl opacity-40 scale-110"
+              sizes="100vw"
+            />
+          </motion.div>
+
+          {/* Imagen principal sin recortes */}
+          <motion.div
+            key={`main-${activeIndex}`}
+            className="relative z-10 w-full h-full flex items-center justify-center"
+            initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-        </>
+          >
+            <div className="relative w-full h-full flex items-center justify-center">
+              <Image
+                src={images[activeIndex]}
+                alt={`${title} - Imagen ${activeIndex + 1}`}
+                fill
+                className="object-contain"
+                sizes="100vw"
+              />
+            </div>
+          </motion.div>
+
+        </div>
       )}
+
+
 
       {/* Indicador de Imagen */}
       <motion.div
@@ -54,24 +84,48 @@ const ProjectCarousel = ({
       {images.length > 1 && (
         <>
           <motion.button
-            onClick={onPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all z-10"
-            aria-label="Previous image"
-            whileHover={{ scale: 1.15, boxShadow: "0 0 20px rgba(255,255,255,0.3)" }}
-            whileTap={{ scale: 0.9 }}
-          >
-            ←
-          </motion.button>
+          onClick={onPrev}
+          className="
+            absolute left-4 top-1/2 -translate-y-1/2
+            bg-white/10 
+            hover:bg-white/20
+            text-white 
+            w-10 h-10 
+            rounded-full 
+            flex items-center justify-center
+            backdrop-blur-sm 
+            transition-all 
+            z-10
+          "
+          aria-label="Previous image"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          ←
+        </motion.button>
+
 
           <motion.button
             onClick={onNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all z-10"
+            className="
+              absolute right-4 top-1/2 -translate-y-1/2
+              bg-white/10 
+              hover:bg-white/20
+              text-white 
+              w-10 h-10 
+              rounded-full 
+              flex items-center justify-center
+              backdrop-blur-sm 
+              transition-all 
+              z-10
+            "
             aria-label="Next image"
-            whileHover={{ scale: 1.15, boxShadow: "0 0 20px rgba(255,255,255,0.3)" }}
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
             →
           </motion.button>
+
 
           {/* Indicadores de puntos */}
           <motion.div
