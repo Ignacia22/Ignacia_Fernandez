@@ -2,39 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "slick-carousel/slick/slick.css"; 
-@import "slick-carousel/slick/slick-theme.css";
+/* 
+  AGREGAR ESTO A TU globals.css O layout.tsx
+  
+  Para que las tipografías funcionen correctamente:
+*/
 
+@import url("https://fonts.googleapis.com/css2?family=Javanese+Text&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
-/* Animaciones para elementos decorativos */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+/* Variables CSS para fácil acceso */
+:root {
+  --font-javanese: "Javanese Text", serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-noto-sans: "Noto Sans", sans-serif;
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+/* Aplicar por defecto */
+body {
+  font-family: var(--font-open-sans);
 }
 
-/* Gradientes más vibrantes para backgrounds */
-.bg-gradient-cool {
-  background: linear-gradient(135deg, #a78bfa, #818cf8, #93c5fd);
-  background-size: 200% 200%;
-  animation: gradient-shift 15s ease infinite;
+/* Títulos con Javanese Text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-javanese);
 }
 
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Efecto de neón sutil para destacar elementos */
-.text-glow {
-  text-shadow: 0 0 5px rgba(167, 139, 250, 0.5), 0 0 10px rgba(167, 139, 250, 0.3);
-}
-
-.box-glow {
-  box-shadow: 0 0 15px rgba(167, 139, 250, 0.5);
+/* Smoothing para mejor visualización */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

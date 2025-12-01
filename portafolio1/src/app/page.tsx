@@ -4,55 +4,142 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+import { Accordion } from "@/components/Accordion/Accordion";
+import { ArrowDownIcon } from "@/components/Accordion/icons";
+
 export default function HomePage() {
+
+
   return (
     <motion.div 
-      className="min-h-[calc(100vh-6rem)]" 
-      initial={{y:"-200vh"}} 
-      animate={{y:"0%"}} 
-      transition={{duration: 1}}
+      className="min-h-screen bg-black text-white" 
+      initial={{opacity: 0}} 
+      animate={{opacity: 1}} 
+      transition={{duration: 0.8}}
     >
-      <div className="min-h-[calc(100vh-6rem)] flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-        {/* IMAGE CONTAINER - TAMAÑO COMPLETO */}
-        <div className="h-[30vh] sm:h-[35vh] md:h-[40vh] lg:h-[calc(100vh-6rem)] lg:w-1/2 relative">
-          <Image 
-            src="https://res.cloudinary.com/dosbg5xdd/image/upload/v1741316660/anime_zflcrc.png" 
-            alt="portada"
-            fill 
-            className="object-contain lg:object-cover lg:object-left"
-            priority
-          />
-        </div>
+      {/* HERO SECTION */}
+      <div className="min-h-[calc(100vh-6rem)] flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 py-8 lg:py-0 gap-8 lg:gap-12">
         
-        {/* TEXT CONTAINER - Optimizado para el espacio limitado */}
-        <div className="flex-1 lg:h-[calc(100vh-6rem)] lg:w-1/2 flex flex-col gap-3 sm:gap-4 lg:gap-6 items-center justify-start lg:justify-center pt-2 lg:pt-0 text-blue-950">
-          {/* TITLE - Tamaño reducido para ajustarse mejor */}
-          <h1 className="text-xl sm:text-2xl sm:mt-10 md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center lg:text-left">
-            Vive la experiencia digital. Diseña conmigo
-          </h1>
+        {/* TEXT CONTAINER - Left side on desktop */}
+        <div className="flex-1 flex flex-col gap-6 sm:gap-8 items-start justify-center py-20 lg:py-[9rem]">
           
-          {/* DESC - Texto más compacto */}
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-center lg:text-left">
-            Creo sitios web que combinan estética y funcionalidad para destacar tu marca en el mundo digital. Como diseñadora y desarrolladora frontend, te ofrezco soluciones personalizadas que no solo capturan la atención visual sino que también proporcionan una experiencia fluida al usuario. Hagamos realidad tu proyecto y llevemos juntos tu presencia web al siguiente nivel.
-          </p>
-          
-          {/* BUTTONS - Con margen inferior para separar del borde */}
-          <div className="w-full flex flex-col sm:flex-row gap-2 sm:gap-3 mt-auto sm:mt-2 mb-6 sm:mb-8 lg:mb-0 lg:mt-4">
-            <Link href="/portafolio" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto py-2 sm:py-3 px-3 sm:px-4 rounded-lg ring-1 ring-black bg-blue-950 text-white hover:bg-white hover:text-blue-950 transition-colors text-sm">
+          {/* TITLE - Javanese Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            <h1 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-normal leading-tight uppercase"
+              style={{fontFamily: 'Javanese Text'}}
+            >
+              Hola,<br />
+              <span className="text-white bg-clip-text bg-gradient-to-r from-gray-200 to-gray-400 uppercase">
+                Soy Ignacia
+              </span>
+            </h1>
+          </motion.div>
+
+          {/* SUBTITLE - Open Sans */}
+          <motion.p 
+            className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed"
+            style={{fontFamily: 'Open Sans'}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            ``Frontend Developer & Diseñadora Web``
+          </motion.p>
+
+          {/* DESCRIPTION - Open Sans */}
+          <motion.p 
+            className="text-xs sm:text-sm md:text-base font-light text-gray-300 max-w-lg leading-relaxed"
+            style={{fontFamily: 'Open Sans', fontWeight: "lighter"}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            Creo sitios web que mezclan estética, orden y una experiencia pensada de verdad para las personas. Como diseñadora y desarrolladora frontend, me enfoco en construir interfaces limpias, fluidas y con intención. Si tienes una idea dando vueltas y quieres convertirla en algo real, trabajemos juntos y llevemos tu presencia web al siguiente nivel.
+          </motion.p>
+
+          {/* Deatline - Open Sans */}
+          <motion.p 
+            className="text-xs sm:text-sm md:text-base text-gray-300 font-extralight italic max-w-lg leading-relaxed"
+            style={{fontFamily: 'Open Sans'}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            ``Diseño y desarrollo webs con cariño, café y un poquito de caos creativo``
+          </motion.p>
+
+          {/* CTA BUTTONS */}
+          <motion.div 
+            className="w-full flex flex-col sm:flex-row gap-4 mt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link href="/portafolio" className="flex-1 sm:flex-none">
+              <button 
+                className="w-full px-6 py-3 sm:py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
+                style={{fontFamily: 'Open Sans'}}
+              >
                 Ve mis trabajos
               </button>
             </Link>
 
-            <Link href="/contact" className="w-full sm:w-auto">
+            <Link href="/contact" className="flex-1 sm:flex-none">
               <button 
-                className="w-full sm:w-auto py-2 sm:py-3 px-3 sm:px-4 rounded-lg ring-1 ring-blue-950 hover:bg-white transition-colors text-sm"
+                className="w-full px-6 py-3 sm:py-3 rounded-lg border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105"
+                style={{fontFamily: 'Open Sans'}}
               >
                 Contáctame
               </button>
             </Link>
-          </div>
+          </motion.div>
+
+          {/* SCROLL INDICATOR */}
+          <motion.div 
+            className="hidden lg:flex flex-col items-center gap-2 mt-auto pt-8"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <p className="text-xs text-gray-500" style={{fontFamily: 'Open Sans'}}>Scroll para explorar un poco</p>
+            <ArrowDownIcon />
+          </motion.div>
+
+
         </div>
+
+        {/* IMAGE CONTAINER - Right side on desktop */}
+        <motion.div 
+          className="flex-1 relative w-full lg:w-4/5 flex items-center justify-center top-4"
+          style={{ 
+            minHeight: '400px',
+            borderRadius: '12px',
+            boxShadow: 'rgba(158, 158, 158, 0.3) 17px 15px 4px 0',
+            overflow: 'hidden'
+          }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <Image 
+            src="https://res.cloudinary.com/dosbg5xdd/image/upload/v1764436044/pexels-pixabay-208984_scftxt.jpg" 
+            alt="Ignacia - Developer & Designer"
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 80vw"
+          />
+        </motion.div>
+      </div>
+
+      {/* ACCORDION SECTION */}
+      <div className="min-h-screen bg-black px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 py-16 lg:py-48 flex flex-col ">
+        
+        <Accordion/>
       </div>
     </motion.div>
   );
