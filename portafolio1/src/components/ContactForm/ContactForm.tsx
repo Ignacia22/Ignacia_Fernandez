@@ -35,7 +35,7 @@ export const ContactForm = () => {
   const [formLoadTime, setFormLoadTime] = useState(0)
   
   const form = useRef<HTMLFormElement>(null)
-  const MAX_SUBMISSIONS = 100
+  const MAX_SUBMISSIONS = 3
   const SUBMISSION_TIMEOUT = 86400000 // 24 horas
 
   useEffect(() => {
