@@ -73,6 +73,7 @@ export const HeroAbout = () => {
             hover:contrast-115
             hover:-translate-y-1
           "
+          onContextMenu={(e) => e.preventDefault()}
         >
           <Image
             src="https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1764555379/WhatsApp_Image_2025-11-29_at_9.16.10_PM-modified_efk0bw.jpg"
