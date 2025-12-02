@@ -6,6 +6,7 @@ export type Sites2 = {
   link: string;
   carouselImages: string[];
   github: string;
+  technologies: string[];
 };
 
 export const Sites: Sites2[] = [
@@ -21,6 +22,18 @@ export const Sites: Sites2[] = [
       "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1745440294/Captura_de_pantalla_2025-04-23_163041_lvz00c.png",
     ],
     github: "https://github.com/Ignacia22/ClubActiveCenter",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Auth0",
+      "NextAuth",
+      "Leaflet",
+      "Google Maps",
+      "Stripe",
+      "Socket.io",
+      "Radix UI",
+    ],
   },
   {
     id: 2,
@@ -34,6 +47,13 @@ export const Sites: Sites2[] = [
       "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1745440963/Captura_de_pantalla_2025-04-23_164137_erinkf.png",
     ],
     github: "https://github.com/Ignacia22/E-commers-Tecno",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Axios",
+      "SweetAlert2",
+    ],
   },
   {
     id: 3,
@@ -48,6 +68,20 @@ export const Sites: Sites2[] = [
       "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1747344376/Captura_de_pantalla_2025-05-15_172545_sn1eyr.png",
     ],
     github: "https://github.com/Ignacia22/Hospital-front",
+    technologies: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "React Router",
+      "Formik",
+      "Axios",
+      "SweetAlert2",
+      "Express",
+      "TypeORM",
+      "PostgreSQL",
+      "dotenv",
+      "Moment.js",
+    ],
   },
   {
     id: 4,
@@ -61,6 +95,14 @@ export const Sites: Sites2[] = [
       "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1745440613/Captura_de_pantalla_2025-04-23_163611_xddftg.png",
     ],
     github: "",
+    technologies: [
+      "WordPress",
+      "Elementor Pro",
+      "cPanel",
+      "BlueHosting",
+      "SSL",
+      "Responsive Design",
+    ],
   },
   {
     id: 5,
@@ -74,6 +116,14 @@ export const Sites: Sites2[] = [
       "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1746658817/Captura_de_pantalla_2025-05-07_185915_srs0hb.png",
     ],
     github: "https://github.com/Ignacia22/121expreso",
+    technologies: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "Framer Motion",
+      "React Router",
+      "EmailJS",
+    ],
   },
   {
     id: 6,
@@ -87,5 +137,13 @@ export const Sites: Sites2[] = [
       "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1751307768/Captura_de_pantalla_2025-06-30_142140_hsybzl.png",
     ],
     github: "https://github.com/Ignacia22/libreria-angular",
+    technologies: [
+      "Angular 19",
+      "TypeScript",
+      "RxJS",
+      "Angular Router",
+      "Angular Forms",
+      "Zone.js",
+    ],
   },
 ];
