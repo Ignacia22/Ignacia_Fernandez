@@ -3,8 +3,6 @@
 import { Sites } from "@/data/sites";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-
-import { extractTechnologies } from "@/utils/extractTechnologies";
 import HeroSection from "@/components/Portafolio/HeroSection";
 import ProjectCard from "@/components/Portafolio/ProjectCard";
 
@@ -85,7 +83,7 @@ const PortafolioPage = () => {
         className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-36 py-20 space-y-40 perspective"
       >
         {Sites.map((site, index) => {
-          const technologies = extractTechnologies(site.desc);
+          const technologies = site.technologies;
           const activeIndex = activeImages[site.id] || 0;
           const isEvenIndex = index % 2 === 0;
 
