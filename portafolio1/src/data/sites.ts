@@ -12,7 +12,7 @@ export const Sites: Sites2[] = [
   {
     id: 1,
     title: "Club deportivo",
-    desc: "Plataforma web para un club deportivo hecha con Next.js y TypeScript, que incluye autenticación con Auth0 y NextAuth, mapas interactivos con Leaflet y Google Maps, pagos con Stripe, comunicación en tiempo real con Socket.io y una interfaz moderna con Tailwind CSS y Radix UI.",
+    desc: "Plataforma web creada para un club deportivo, donde construí una experiencia moderna, rápida y agradable para los usuarios. Incluye autenticación segura, mapas interactivos para localizar sedes, pagos online y comunicación en tiempo real. Todo diseñado y desarrollado para que cualquier persona pueda navegar, reservar y participar fácilmente.Fue uno de mis proyectos más complejos y me permitió combinar diseño, usabilidad y funcionalidades avanzadas.",
     img: "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1742855975/Captura_de_pantalla_2025-02-16_180433_zjwbdo.png",
     link: "https://club-active-center-omega.vercel.app",
     carouselImages: [
@@ -25,7 +25,7 @@ export const Sites: Sites2[] = [
   {
     id: 2,
     title: "Ecomm de Tecnologia",
-    desc: "Aplicación web desarrollada con Next.js y TypeScript, utilizando Tailwind CSS para una interfaz moderna y responsiva. Incorpora Axios para el consumo de APIs y SweetAlert2 para brindar una experiencia de usuario más interactiva mediante alertas personalizadas.",
+    desc: "E-commerce de productos tecnológicos con un enfoque en velocidad, claridad y buena experiencia. Diseñé la interfaz pensando en compras rápidas, navegación simple y alertas interactivas que hacen todo más fluido.Trabajé la estructura, el consumo de APIs y la lógica del carrito para que fuera intuitivo, estable y visualmente atractivo.",
     img: "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1764263097/imagen_2025-11-27_140455018_j8ojyn.png",
     link: "https://e-commers-tecno.vercel.app",
     carouselImages: [
@@ -38,7 +38,7 @@ export const Sites: Sites2[] = [
   {
     id: 3,
     title: "WOO Hospital",
-    desc: "Aplicación full stack desarrollada con React y Vite en el frontend, y Express con TypeScript en el backend. Incluye rutas dinámicas con React Router, formularios controlados con Formik, peticiones a APIs usando Axios y alertas interactivas con SweetAlert2. En el servidor, se utilizó Express junto a TypeORM para la gestión de base de datos PostgreSQL, con manejo de fechas usando Moment y configuración de entorno con dotenv.",
+    desc: "Aplicación full-stack para gestionar turnos médicos, pacientes y rutas internas. En el frontend desarrollé una interfaz clara y cercana, y en el backend construí toda la lógica con TypeScript y Express para manejar datos en PostgreSQL.Fue un proyecto desafiante donde aprendí muchísimo sobre arquitectura, validaciones, seguridad y flujos reales de una app profesional.",
     img: "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1743034896/Captura_de_pantalla_2025-03-26_191925_jdgiux.png",
     link: "https://hospital-front-livid.vercel.app",
 
@@ -52,7 +52,7 @@ export const Sites: Sites2[] = [
   {
     id: 4,
     title: "Errefe Producciones",
-    desc: "Sitio web creado con WordPress y personalizado con Elementor Pro, logrando un diseño visual atractivo y completamente responsive. El proyecto fue implementado en un entorno de hosting gestionado mediante cPanel y Blue Hosting, lo que permitió una configuración eficiente del dominio, seguridad SSL y gestión de archivos.",
+    desc: "Sitio web desarrollado para una productora audiovisual. Trabajé en el diseño visual, la estructura del contenido y la configuración completa del hosting, logrando un sitio profesional, responsive y fácil de mantener.Fue una experiencia real con cliente donde trabajé comunicación, diseño y solución de problemas técnicos.",
     img: "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1745438505/Captura_de_pantalla_2025-04-23_154408_raaysu.png",
     link: "https://www.errefe.cl",
     carouselImages: [
@@ -65,7 +65,7 @@ export const Sites: Sites2[] = [
   {
     id: 5,
     title: "121Expreso",
-    desc: "Reproductor web para una radio de rock en vivo, desarrollado con React, Vite y TypeScript. Incluye animaciones con Framer Motion, diseño responsivo, navegación con React Router y un formulario de contacto integrado con EmailJS. Pensado para transmitir la energía del rock con una experiencia fluida y moderna.",
+    desc: "Reproductor web para una radio de rock en vivo. Diseñado para transmitir energía desde el primer segundo: animaciones, movimientos suaves, interfaz oscura y contenidos musicales.Integré reproducción en vivo, navegación y un formulario de contacto funcional, logrando un sitio moderno y con mucha personalidad.",
     img: "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1745438505/Captura_de_pantalla_2025-04-23_154408_raaysu.png",
     link: "https://121expreso.com.ar",
     carouselImages: [
@@ -78,7 +78,7 @@ export const Sites: Sites2[] = [
   {
     id: 6,
     title: "LibroMart",
-    desc: "Catálogo web desarrollado con Angular 19, TypeScript y RxJS, donde puedes buscar libros por nombre, autor o categoría. Implementado con Angular Router para navegación y Angular Forms para la búsqueda. Ideal para explorar títulos rápidamente desde cualquier dispositivo.",
+    desc: "Catálogo web para explorar libros de manera rápida y filtrada por categoría, autor o nombre. Construido con Angular, incluye navegación, formularios reactivos y una búsqueda eficiente.Fue mi proyecto para aprender Angular 19 y entender cómo estructurar apps más grandes con componentes, servicios y rutas.",
     img: "https://res.cloudinary.com/dosbg5xdd/image/upload/q_70/f_auto/v1745438505/Captura_de_pantalla_2025-04-23_154408_raaysu.png",
     link: "https://libreria-angular.vercel.app/books",
     carouselImages: [
