@@ -9,7 +9,7 @@ export default function sitemap() {
       lastModified: new Date(),
     },
     {
-      url: "https://ignacia-fernandez.vercel.app/portafolio",
+      url: "https://ignacia-fernandez.vercel.app/proyectos",
       lastModified: new Date(),
     },
     {

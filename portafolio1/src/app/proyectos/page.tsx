@@ -3,14 +3,14 @@
 import { Sites } from "@/data/sites";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import HeroSection from "@/components/Portafolio/HeroSection";
-import ProjectCard from "@/components/Portafolio/ProjectCard";
+import HeroSection from "@/components/Proyectos/HeroSection";
+import ProjectCard from "@/components/Proyectos/ProjectCard";
 
 interface ActiveImagesType {
   [key: number]: number;
 }
 
-const PortafolioPage = () => {
+const ProyectosPage = () => {
   const [activeImages, setActiveImages] = useState<ActiveImagesType>({});
 
   useEffect(() => {
@@ -115,4 +115,4 @@ const PortafolioPage = () => {
   );
 };
 
-export default PortafolioPage;
+export default ProyectosPage;

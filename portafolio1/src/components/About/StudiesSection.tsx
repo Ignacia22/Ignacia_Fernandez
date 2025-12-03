@@ -75,7 +75,7 @@ export const StudiesSection = () => {
                 className="text-lg sm:text-xl font-semibold text-white mb-2"
                 style={{fontFamily: 'Open Sans'}}
               >
-                Desarrolladora Frontend Junior
+                Desarrolladora Frontend
               </h3>
               <p 
                 className="text-sm text-gray-400 mb-3"
