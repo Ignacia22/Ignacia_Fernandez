@@ -80,7 +80,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link href="/portafolio" className="flex-1 sm:flex-none">
+            <Link href="/proyectos" className="flex-1 sm:flex-none">
               <button 
                 className="w-full px-6 py-3 sm:py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
                 style={{fontFamily: 'Open Sans'}}

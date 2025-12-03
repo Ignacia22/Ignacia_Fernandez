@@ -34,7 +34,7 @@ export const ContactFormFields = ({
           className="block text-sm font-black text-black mb-3 focus:ring-2 focus:ring-white/30"
           style={{ fontFamily: 'Open Sans' }}
         >
-          Nombre:
+          Nombre *
         </label>
         <input
         type="text"

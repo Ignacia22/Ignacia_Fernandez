@@ -48,7 +48,7 @@ export const AccordionItem = ({ item, isOpen, onToggle }: AccordionItemProps) =>
         transition={{ duration: 0.3 }}
         className="overflow-hidden"
       >
-        <div className="px-12 py-4 border-t border-gray-200 bg-gray-50">
+        <div className="px-12 py-4 border-t border-gray-200 bg-gray-50 whitespace-pre-line">
           {/* Text content */}
           <p 
             className="text-sm text-gray-700 leading-relaxed mb-4"
