@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Javanese+Text&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,9 +10,6 @@
   
   Para que las tipografías funcionen correctamente:
 */
-
-@import url("https://fonts.googleapis.com/css2?family=Javanese+Text&family=Open+Sans:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
 /* Variables CSS para fácil acceso */
 :root {
