@@ -11,35 +11,36 @@ const TechStack = ({ technologies }: TechStackProps) => {
 
   return (
     <motion.div
-      className="mb-8"
+      className="mb-8 max-w-xl"
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       viewport={{ once: true }}
     >
-      <p
-        className="text-white font-regular mb-4 text-lg uppercase"
+      <h3
+        className="text-white font-regular mt-8 mb-3 text-lg uppercase"
         style={{ fontFamily: 'Javanese Text' }}
       >
         Stack Tecnológico
-      </p>
+      </h3>
 
       <div
-        className="flex flex-wrap gap-1 text-gray-300"
         style={{ fontWeight: 100, fontSize: "medium" }}
       >
-        {technologies.map((tech, index) => (
+        <div className="flex flex-wrap gap-2 mt-3 text-gray-200">
+        {technologies.map((tech) => (
           <motion.span
-            key={index}
+            key={tech}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.5 + index * 0.02 }}
+            transition={{ delay: 0.5 }}
             viewport={{ once: true }}
+            className="px-3 py-1 text-sm rounded-full bg-white/5 border border-white/10"
           >
             {tech}
-            {index < technologies.length - 1 && <span className="mx-2">•</span>}
           </motion.span>
         ))}
+        </div>
       </div>
     </motion.div>
   );

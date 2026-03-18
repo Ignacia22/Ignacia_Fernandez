@@ -80,7 +80,7 @@ const ProyectosPage = () => {
       {/* Projects Section */}
       <section
         id="proyectos"
-        className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-36 py-20 space-y-40 perspective"
+        className="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-36 py-20 space-y-40 perspective whitespace-pre-line"
       >
         {Sites.map((site, index) => {
           const technologies = site.technologies;
@@ -92,7 +92,9 @@ const ProyectosPage = () => {
               key={site.id}
               id={site.id}
               title={site.title}
+              tagline={site.tagline}
               description={site.desc}
+              characteristics={site.characteristics}
               images={site.carouselImages}
               activeImageIndex={activeIndex}
               technologies={technologies}
