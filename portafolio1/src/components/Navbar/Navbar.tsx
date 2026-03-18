@@ -64,7 +64,7 @@ export const Navbar: React.FC = () => {
                 </Link>
 
                 <Link
-                href="https://docs.google.com/document/d/1wQ0L2itT11LmYLANaPI6r10DeKK4hWmD/edit?usp=sharing&ouid=110807804075749061967&rtpof=true&sd=true"
+                href="https://drive.google.com/file/d/1MI4FAnI8ETo3cu4Wm_sYrIAg1jFZjNWu/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-400 transition-colors p-2"
